@@ -20,19 +20,31 @@
     @Override
     public void caminar(){
 
-        System.out.println("El robot ya esta caminando hacia el cliente");
+        System.out.println("El robot ya esta caminando hacia el cliente, presionar atender");
     }
 
+    /**
+     * Cuando el robot llega a la mesa, comienza a atender al cliente, por lo que cambia su estado a 
+     * atendiendo
+     */
     @Override
     public void atender(){
 
-        System.out.println("El robot ha llegado a la mesa del cliente, comenzando a atender");
+        System.out.println("El robot ha llegado al cliente, por favor presiones atender de nuevo para mostrarle el menu");
 
-        // TODO: Aqui es donde leemos el menu con iterator
+        robot.setState(robot.getEstadoAtendiendo());
+    }
 
-        // Mi idea es leer el menu y una vez confirmando la orden, pasar al estado cocinando
-        // En la clase robot esta el atributo ordenRecibida
+    @Override
+    public void cocinar(){
 
-        robot.setState(robot.getEstadoCocinando());
+        System.out.println("Cocinar mientras el robot camina es peligroso! en cuanto el robot llegue lo atendera");
+    }
+
+    @Override
+    public void suspender(){
+
+        System.out.println("Suspendiendo el robot... \n 3... \n 2... \n 1... \n Robot suspendido");
+        robot.setState(robot.getEstadoSuspendido());
     }
  }

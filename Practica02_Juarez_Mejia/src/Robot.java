@@ -12,12 +12,13 @@ class Robot{
 
     public Robot(){
 
-        estadoSuspendido = new EstadoSuspendido();
-        estadoCaminando = new EstadoCaminando();
-        estadoAtendiendo = new EstadoAtendiendo();
-        estadoCocinando = new EstadoCocinando();
+        estadoSuspendido = new EstadoSuspendido(this);
+        estadoCaminando = new EstadoCaminando(this);
+        estadoAtendiendo = new EstadoAtendiendo(this);
+        estadoCocinando = new EstadoCocinando(this);
 
         estadoActual = estadoSuspendido;
+        ordenRecibida = false;
     }
 
     public EstadoRobot getEstadoSuspendido(){
@@ -43,6 +44,31 @@ class Robot{
     public void setState(EstadoRobot nuevoEstado){
 
         this.estadoActual = nuevoEstado;
+    }
+
+    public void activar(){
+
+        estadoActual.activar();
+    }
+
+    public void caminar(){
+
+        estadoActual.caminar();
+    }
+
+    public void atender(){
+
+        estadoActual.atender();
+    }
+
+    public void cocinar(){
+
+        estadoActual.cocinar();
+    }
+
+    public void suspender(){
+
+        estadoActual.suspender();
     }
 
 

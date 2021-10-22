@@ -2,7 +2,7 @@
  * Estado en el cual el robot se encuentra suspendido, por lo cual solo se puede activar
  */
 
-class Estadosuspendido implements EstadoRobot{
+class EstadoSuspendido implements EstadoRobot{
 
     Robot robot;
 
