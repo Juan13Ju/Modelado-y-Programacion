@@ -35,14 +35,14 @@ class EstadoCocinando implements EstadoRobot{
     public void atender(){
 
         System.out.println("La orden ya ha sido recibida, presione cocinar para empezar el proceso de cocina");
-        System.out.println("      \_/");
-        System.out.println("     (* *)    En seguida le traemos ");
-        System.out.println("    __) (__       su Mcburger ");
-        System.out.println("   ( )...( )(_)");
-        System.out.println("   || |_| ||//");
-        System.out.println(">==() | | ()/");
-        System.out.println("    _(___)_");
-        System.out.println("   [-]   [-]");
+        System.out.println("      |_|");
+	    System.out.println("     (* *)    En seguida le traemos ");
+	    System.out.println("    __) (__       su Mcburger ");
+	    System.out.println("   ( )...( )(_)");
+	    System.out.println("   || |_| ||//");
+	    System.out.println(">==() | | ()/");
+	    System.out.println("    _(___)_");
+	    System.out.println("   [-]   [-]");
     }
 
     @Override
