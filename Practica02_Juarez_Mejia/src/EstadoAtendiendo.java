@@ -17,30 +17,30 @@ class EstadoAtendiendo implements EstadoRobot{
     public void activar(){
 
         System.out.println("El robot ya esta activado y lo esta atendiendo");
-	    System.out.println("      \_/");
-	    System.out.println("     (* *)     Bienvenido a ");
-	    System.out.println("    __) (__       Mcburger ");
-	    System.out.println("   ( )...( )(_)");
-	    System.out.println("   || |_| ||//");
-	    System.out.println(">==() | | ()/");
-	    System.out.println("    _(___)_");
-	    System.out.println("   [-]   [-]");
+	System.out.println("      |_|");
+	System.out.println("     (* *)     Bienvenido a ");
+	System.out.println("    __) (__       Mcburger ");
+	System.out.println("   ( )...( )(_)");
+	System.out.println("   || |_| ||//");
+	System.out.println(">==() | | ()/");
+	System.out.println("    _(___)_");
+	System.out.println("   [-]   [-]");
     }
 
     @Override
     public void caminar(){
 
         System.out.println("El robot no puede caminar mientras atiende a un cliente");
-	    System.out.println("  Ya le dije que   (___ )");
-	    System.out.println(" no vendemos sopa   oo~)/");
-	    System.out.println("    \_/             \-_/");
-	    System.out.println("   (_**)          / \|/  \ ");
-	    System.out.println("  __) (_         ( / .- \ )");
-	    System.out.println(" ( )...()        \ \ .  /_/");
-	    System.out.println(" || | |||         \/___(_/");
-	    System.out.println(" || | |()__/       | |  |");
-	    System.out.println(" /\(___)           |_|__|");
-	    System.out.println(" [-]   [-]        (_(___]");
+	System.out.println("Ya le dije que     (___ )");
+	System.out.println(" no vendemos sopa   oo~)/");
+	System.out.println("    |_|             |o_|");
+	System.out.println("   (_**)          / (|)  - ");
+	System.out.println("  __) (_         ( / .- ) )");
+	System.out.println(" ( )...()        | | .  /_/");
+	System.out.println(" || | |||         (|___(_/");
+	System.out.println(" || | |()__/       | |  |");
+	System.out.println(" /|(___)           |_|__|");
+	System.out.println(" [-]   [-]        (_(___]");
     }
 
     public void atender(){
