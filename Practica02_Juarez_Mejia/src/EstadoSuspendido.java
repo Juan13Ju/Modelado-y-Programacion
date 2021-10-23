@@ -18,14 +18,14 @@ class EstadoSuspendido implements EstadoRobot{
     public void activar(){
 
         System.out.println("El robot ha sido activado, comenzando a caminar hacia el cliente");
-	    System.out.println("    \_/");
-	    System.out.println("   (_**)    ¡Voy corriendo!");
-	    System.out.println("  __) (_");
-	    System.out.println(" ( )...()");
-	    System.out.println(" || | |||");
-	    System.out.println(" || | |()__/");
-	    System.out.println(" /\(___)");
-	    System.out.println(" [-]   [-]");
+	System.out.println("    |_|");
+	System.out.println("   (_**)    ¡Voy corriendo!");
+	System.out.println("  __) (_");
+	System.out.println(" ( )...()");
+	System.out.println(" || | |||");
+	System.out.println(" || | |()__/");
+	System.out.println(" /|(___)");
+	System.out.println(" [-]   [-]");
         
         robot.setState(robot.getEstadoCaminando());
     }
@@ -34,28 +34,28 @@ class EstadoSuspendido implements EstadoRobot{
     public void caminar(){
 
         System.out.println("El robot no puede caminar mientras esta suspendido, seleccione la opcion de activar");
-	    System.out.println("    \_/");
-	    System.out.println("   (_**)   Z z z");
-	    System.out.println("  __) (_");
-	    System.out.println(" ( )...()");
-	    System.out.println(" || | |||");
-	    System.out.println(" || | |()__/");
-	    System.out.println(" /\(___)");
-	    System.out.println(" [-]   [-]");
+	System.out.println("    |_|");
+	System.out.println("   (_**)   Z z z");
+	System.out.println("  __) (_");
+	System.out.println(" ( )...()");
+	System.out.println(" || | |||");
+	System.out.println(" || | |()__/");
+	System.out.println(" /|(___)");
+	System.out.println(" [-]   [-]");
     }
 
     @Override
     public void atender(){
 
         System.out.println("El robot no lo puede atender mientras esta suspendido, seleccione la opcion de activar");
-	    System.out.println("      \_/");
-	    System.out.println("     (* *)   Z z z");
-	    System.out.println("    __) (__");
-	    System.out.println("   ( )...( )(_)");
-	    System.out.println("   || |_| ||//");
-	    System.out.println(">==() | | ()/");
-	    System.out.println("    _(___)_");
-	    System.out.println("   [-]   [-]");
+	System.out.println("    |_|");
+	System.out.println("   (_**)   Z z z");
+	System.out.println("  __) (_");
+	System.out.println(" ( )...()");
+	System.out.println(" || | |||");
+	System.out.println(" || | |()__/");
+	System.out.println(" /|(___)");
+	System.out.println(" [-]   [-]");
 
     }
 
@@ -74,13 +74,13 @@ class EstadoSuspendido implements EstadoRobot{
     public void suspender(){
 
         System.out.println("El robot ya se encuentra suspendido");
-	    System.out.println("      \_/");
-	    System.out.println("     (* *)   A mimir again");
-	    System.out.println("    __) (__");
-	    System.out.println("   ( )...( )(_)");
-	    System.out.println("   || |_| ||//");
-	    System.out.println(">==() | | ()/");
-	    System.out.println("    _(___)_");
-	    System.out.println("   [-]   [-]");
+	System.out.println("      |_|");
+	System.out.println("     (* *)   A mimir again");
+	System.out.println("    __) (__");
+	System.out.println("   ( )...( )(_)");
+	System.out.println("   || |_| ||//");
+	System.out.println(">==() | | ()/");
+	System.out.println("    _(___)_");
+	System.out.println("   [-]   [-]");
     }
 }
