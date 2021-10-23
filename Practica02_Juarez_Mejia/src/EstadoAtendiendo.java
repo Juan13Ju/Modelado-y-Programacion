@@ -17,7 +17,7 @@ class EstadoAtendiendo implements EstadoRobot{
     public void activar(){
 
         System.out.println("El robot ya esta activado y lo esta atendiendo");
-        System.out.println("      \_/");
+	    System.out.println("      \_/");
 	    System.out.println("     (* *)     Bienvenido a ");
 	    System.out.println("    __) (__       Mcburger ");
 	    System.out.println("   ( )...( )(_)");
@@ -31,7 +31,7 @@ class EstadoAtendiendo implements EstadoRobot{
     public void caminar(){
 
         System.out.println("El robot no puede caminar mientras atiende a un cliente");
-        System.out.println("  Ya le dije que   (___ )");
+	    System.out.println("  Ya le dije que   (___ )");
 	    System.out.println(" no vendemos sopa   oo~)/");
 	    System.out.println("    \_/             \-_/");
 	    System.out.println("   (_**)          / \|/  \ ");
