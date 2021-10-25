@@ -2,7 +2,7 @@
     * Clase que define las caracteristicas de las hamburguesas de MacBurguesa
     */
 
-public class Macburguesas{
+public class Macburguesa{
   
   /**
     * Identificador de hamburguesas de acuerdo a su posicion
@@ -15,7 +15,7 @@ public class Macburguesas{
   /**
     * Nombre de la MacBurguesa
     */
-  private String Macburguesa;
+  private String macburguesa;
   
   
   
@@ -48,7 +48,14 @@ public class Macburguesas{
     */
   private boolean vegetariana;
 
+  public Macburguesa(int id, String macburguesa, String descripcion, double precio, boolean queso, boolean vegetariana){
 
+    this.id = id;
+    this.macburguesa = macburguesa;
+    this.descripcion = descripcion;
+    this.precio = precio;
+    this.queso = queso;
+    this.vegetariana = vegetariana;
 
-
+  }
 }
