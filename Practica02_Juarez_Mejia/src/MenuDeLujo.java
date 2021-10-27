@@ -9,14 +9,14 @@ class MenuDeLujo implements Menu{
 
     public MenuDeLujo(){
 
-        Macburguesa pollo = new Macburguesa(7,"pollo lujo", "Ham con pollo lujo", 20, true, false);
-        Macburguesa carne = new Macburguesa(8,"carne lujo", "Ham con carne lujo", 25, false, true);
-        Macburguesa veg = new Macburguesa(9,"veg lujo", "Ham veg lujo", 10, true, false);
+        Macburguesa bbq = new Macburguesa(9,"Mcburger BBQ", "Hamburguesa de carne de res con salsa BBQ", 89.40, true, false);
+        Macburguesa ranch = new Macburguesa(10,"Mcburger ranch", "Hamburguesa de carne de res con salsa ranch", 89.90, true, true);
+        Macburguesa acaramelada = new Macburguesa(11,"Macburger acaramelada", "Hamburguesa de carne de res con cebolla y pan caramelizado", 90.02, true, false);
 
         Hashtable<Integer, Macburguesa> menu = new Hashtable<>();
-        menu.put(1, pollo);
-        menu.put(2, carne);
-        menu.put(3, veg);
+        menu.put(1, bbq);
+        menu.put(2, ranch);
+        menu.put(3, acaramelada);
         this.menu = menu;
     }
 
