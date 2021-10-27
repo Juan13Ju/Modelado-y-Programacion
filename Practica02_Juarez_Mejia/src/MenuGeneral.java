@@ -14,10 +14,10 @@ class MenuGeneral implements Menu{
      */
     public MenuGeneral(){
 
-        Macburguesa pollo = new Macburguesa(1,"Macburger clásica", "Hamburguesa sencilla.", 39.00, false, false);
-        Macburguesa carne = new Macburguesa(2,"Macburger big", "Hamburguesa de 2 carnes y 3 panes", 50.30, true, false);
-        Macburguesa veg = new Macburguesa(3,"Macburger de soya", "Hamburguesa de carne de soya", 40.05, true, true;
-        this.menu = new Macburguesa[]{Macburger clásica, Macburger big, Macburger de soya};
+        Macburguesa clasica = new Macburguesa(1,"Macburger clásica", "Hamburguesa sencilla.", 39.00, false, false);
+        Macburguesa big = new Macburguesa(2,"Macburger big", "Hamburguesa de 2 carnes y 3 panes", 50.30, true, false);
+        Macburguesa soya = new Macburguesa(3,"Macburger de soya", "Hamburguesa de carne de soya", 40.05, true, true;
+        this.menu = new Macburguesa[]{clásica, big, soya};
     }
 
     /**
