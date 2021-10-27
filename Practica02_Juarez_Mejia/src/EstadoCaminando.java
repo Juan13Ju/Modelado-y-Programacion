@@ -18,6 +18,14 @@
     public void activar(){
 
         System.out.println("El robot ya esta activado y caminando hacia el cliente");
+	System.out.println("    |_|");
+	System.out.println("   (_**)   *Se despierta*");
+	System.out.println("  __) (_");
+	System.out.println(" ( )...()");
+	System.out.println(" || | |||");
+	System.out.println(" || | |()__/");
+	System.out.println(" /|(___)");
+	System.out.println(" [-]   [-]");
 
     }
 
