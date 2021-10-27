@@ -1,28 +1,25 @@
-/**
- * Clase que representa el menu del dia del restaurante
- */
+import java.util.ArrayList;
+
 class MenuDelDia implements Menu{
 
     /**
-     * El menu de hamburguesas contenido en una lista de arreglos
+     * ArrayList con las hamburguesas del dia
      */
-    ArrayList<String> Macburguesa = new ArrayList<Macburguesa>(menu);
+    ArrayList<Macburguesa> menu;
 
-    /**
-     * Constructor para el menu del dia
-     * @param menu Una lista de arreglo representando el menu
-     */
-    public MenuDelDia(new ArrayList<Macburguesa>(menu)){
+    public MenuDelDia(){
 
+        Macburguesa pollo = new Macburguesa(3,"pollo del dia", "Ham con pollo del dia", 20, true, false);
+        Macburguesa carne = new Macburguesa(4,"carne del dia", "Ham con carne del dia", 25, false, true);
+        Macburguesa veg = new Macburguesa(5,"veg del dia", "Ham veg del dia", 10, true, false);
+        ArrayList<Macburguesa> menu = new ArrayList<>();
+        menu.add(pollo);
+        menu.add(carne);
+        menu.add(veg);
         this.menu = menu;
-
     }
 
-    /**
-     * Regresa un iterador del Menu General
-     * @return Objeto de tipo iterador para el Menu General
-     */
-    public Iterator createIterator(){
+    public MyIterator createIterator(){
 
         return new MenuDelDiaIterator(menu);
     }

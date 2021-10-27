@@ -15,7 +15,7 @@ public class Macburguesa{
   /**
     * Nombre de la MacBurguesa
     */
-  private String macburguesa;
+  private String nombre;
   
   
   
@@ -48,14 +48,26 @@ public class Macburguesa{
     */
   private boolean vegetariana;
 
-  public Macburguesa(int id, String macburguesa, String descripcion, double precio, boolean queso, boolean vegetariana){
+  public Macburguesa(int id, String nombre, String descripcion, double precio, boolean queso, boolean vegetariana){
 
     this.id = id;
-    this.macburguesa = macburguesa;
+    this.nombre = nombre;
     this.descripcion = descripcion;
     this.precio = precio;
     this.queso = queso;
     this.vegetariana = vegetariana;
 
+  }
+
+  public int getId(){
+    return this.id;
+  }
+
+  public String getNombre(){
+    return this.nombre;
+  }
+
+  public String getDescripcion(){
+    return this.descripcion;
   }
 }

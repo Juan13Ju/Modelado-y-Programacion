@@ -5,6 +5,10 @@ class Robot{
 
     private EstadoRobot estadoActual;
 
+    private Menu menuDelDia;
+    private Menu menuGeneral;
+    private Menu menuDeLujo;
+
     private EstadoRobot estadoSuspendido;
     private EstadoRobot estadoCaminando;
     private EstadoRobot estadoAtendiendo;
@@ -19,6 +23,10 @@ class Robot{
 
         estadoActual = estadoSuspendido;
         ordenRecibida = false;
+
+        this.menuGeneral = new MenuGeneral();
+        this.menuDelDia = new MenuDelDia();
+        this.menuDeLujo = new MenuDeLujo();
     }
 
     public EstadoRobot getEstadoSuspendido(){
@@ -69,6 +77,39 @@ class Robot{
     public void suspender(){
 
         estadoActual.suspender();
+    }
+
+    /**
+     * Metodo para imprimir el menu del restaurant
+     */
+    public void printMenu(){
+
+        MyIterator generalIterator = menuGeneral.createIterator();
+        MyIterator delDiaIterator = menuDelDia.createIterator();
+        MyIterator deLujoIterator = menuDeLujo.createIterator();
+
+        System.out.println("----Menu general----");
+        printMenu(generalIterator);
+        System.out.println("----Menu del Dia----");
+        printMenu(delDiaIterator);
+        System.out.println("----Menu de Lujo----");
+        printMenu(deLujoIterator);
+    }
+
+    /**
+     * Metodo para imprimir los productos de un menu especifico usando su iterador
+     * @param iterator El iterador que vamos a utilizar
+     */
+    public void printMenu(MyIterator iterator){
+
+        while(iterator.hasNext()){
+
+            Macburguesa mac = (Macburguesa)iterator.next();
+            int id = mac.getId();
+            String nombre = mac.getNombre();
+            String descripcion = mac.getDescripcion();
+            System.out.println(id + " " + nombre + "\n" + descripcion);
+        }
     }
 
 

@@ -1,7 +1,7 @@
 /**
  * Interfaz para iterar sobre una coleccion
  */
-interface Iterator{
+interface MyIterator{
 
     public boolean hasNext();
 

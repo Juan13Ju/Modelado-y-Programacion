@@ -1,4 +1,4 @@
-class MenuGeneralIterator implements Iterator{
+class MenuGeneralIterator implements MyIterator{
 
     /**
      * Las hamburguesas del menu general

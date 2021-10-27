@@ -21,7 +21,6 @@ class EstadoCocinando implements EstadoRobot{
 
     @Override
     public void caminar(){
-
         System.out.println("El robot no puede caminar mientras cocina");
         System.out.println("   .--,--.");
         System.out.println("   `.  ,.'");
@@ -50,12 +49,12 @@ class EstadoCocinando implements EstadoRobot{
 
         // TODO: Aqui implementamos la parte de template
         System.out.println("Cocinando... \n platillo terminado, regresando a estado suspendido");
-        robot.setState(robot.getEstadoCocinando());
+        robot.setState(robot.getEstadoSuspendido());
     }
 
     @Override
     public void suspender(){
 
-        System.out.println("El robot no se puede suspender mientras camina");
+        System.out.println("El robot no se puede suspender mientras cocina");
     }
 }

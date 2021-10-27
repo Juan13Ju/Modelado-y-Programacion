@@ -4,5 +4,5 @@
 interface Menu{
 
     
-    public Iterator createIterator();
+    public MyIterator createIterator();
 }

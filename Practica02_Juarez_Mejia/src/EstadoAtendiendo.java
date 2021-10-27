@@ -45,13 +45,9 @@ class EstadoAtendiendo implements EstadoRobot{
 
     public void atender(){
 
-        // TODO : Mi idea es que aqui usamos iterator para leerle el menu al cliente
         System.out.println("Comenzando a leer el menu");
-        // * Esto de abajo es para probar el estaod de cocinar
-        System.out.println("Orden recibida, comenzando a cocinar");
-        // ?Me parece que esto de abajo es innecesario porque de igual manera solo vamos a llamar al estado?
-        // ?EstadoCocinando si la orden recibida es valida, entonces creo que el atributo es innecesario? 
-        robot.ordenRecibida = true;
+        robot.printMenu();
+        System.out.println("Comenzando a cocinar");
         robot.setState(robot.getEstadoCocinando());
     }
 
