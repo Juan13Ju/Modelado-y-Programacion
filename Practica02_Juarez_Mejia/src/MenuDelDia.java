@@ -9,9 +9,9 @@ class MenuDelDia implements Menu{
 
     public MenuDelDia(){
 
-        Macburguesa pollo = new Macburguesa(3,"pollo del dia", "Ham con pollo del dia", 20, true, false);
-        Macburguesa carne = new Macburguesa(4,"carne del dia", "Ham con carne del dia", 25, false, true);
-        Macburguesa veg = new Macburguesa(5,"veg del dia", "Ham veg del dia", 10, true, false);
+        Macburguesa pollo = new Macburguesa(4,"pollo del dia", "Ham con pollo del dia", 20, true, false);
+        Macburguesa carne = new Macburguesa(5,"carne del dia", "Ham con carne del dia", 25, false, true);
+        Macburguesa veg = new Macburguesa(6,"veg del dia", "Ham veg del dia", 10, true, false);
         ArrayList<Macburguesa> menu = new ArrayList<>();
         menu.add(pollo);
         menu.add(carne);

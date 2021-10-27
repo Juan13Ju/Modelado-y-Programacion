@@ -1,7 +1,7 @@
 class Robot{
 
     // Atributo para saber si el robot recibio la orden del cliente para comenzar a cocinar
-    public boolean ordenRecibida;
+    public Macburguesa orden;
 
     private EstadoRobot estadoActual;
 
@@ -22,7 +22,7 @@ class Robot{
         estadoCocinando = new EstadoCocinando(this);
 
         estadoActual = estadoSuspendido;
-        ordenRecibida = false;
+        orden = null;
 
         this.menuGeneral = new MenuGeneral();
         this.menuDelDia = new MenuDelDia();
@@ -74,6 +74,17 @@ class Robot{
         estadoActual.cocinar();
     }
 
+    public void cocinar(Macburguesa ham){
+
+        Burguer mac;
+
+        if(ham.getVegetariana()){
+            mac = new VeganBurguer(ham);
+        }else{
+            mac = new NormalBurguer(ham);
+        }
+    }
+
     public void suspender(){
 
         estadoActual.suspender();
@@ -110,6 +121,41 @@ class Robot{
             String descripcion = mac.getDescripcion();
             System.out.println(id + " " + nombre + "\n" + descripcion);
         }
+    }
+
+
+    public void findBurguer(int id) throws InvalidIdException{
+
+        MyIterator generalIterator = menuGeneral.createIterator();
+        MyIterator delDiaIterator = menuDelDia.createIterator();
+        MyIterator deLujoIterator = menuDeLujo.createIterator();
+
+        while(generalIterator.hasNext()){
+            Macburguesa ham = (Macburguesa)generalIterator.next();
+            if(id == ham.getId()){
+                this.orden = ham;
+                return;
+            }
+        }
+
+        while(delDiaIterator.hasNext()){
+            Macburguesa ham = (Macburguesa)delDiaIterator.next();
+            
+            if(id == ham.getId()){
+                this.orden = ham;
+                return;
+            }
+        }
+
+        while(deLujoIterator.hasNext()){
+            Macburguesa ham = (Macburguesa)deLujoIterator.next();
+            if(id == ham.getId()){
+                this.orden = ham;
+                return;
+            }
+        }
+
+        throw new InvalidIdException();
     }
 
 

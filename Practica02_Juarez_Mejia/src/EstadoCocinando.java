@@ -47,8 +47,8 @@ class EstadoCocinando implements EstadoRobot{
     @Override
     public void cocinar(){
 
-        // TODO: Aqui implementamos la parte de template
-        System.out.println("Cocinando... \n platillo terminado, regresando a estado suspendido");
+        System.out.println("Comenzando a cocinar su hamburguesa");
+        robot.cocinar(robot.orden);
         robot.setState(robot.getEstadoSuspendido());
     }
 

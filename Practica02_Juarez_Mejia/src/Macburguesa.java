@@ -70,4 +70,12 @@ public class Macburguesa{
   public String getDescripcion(){
     return this.descripcion;
   }
+
+  public boolean getQueso(){
+    return this.queso;
+  }
+
+  public boolean getVegetariana(){
+    return this.vegetariana;
+  }
 }

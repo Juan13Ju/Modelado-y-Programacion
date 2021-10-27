@@ -3,6 +3,7 @@
  * Para ayudar al usuario a familiarizarse con el modo de activaciones se ha agregado un modelo de un robot en ascii.
  */
 
+import java.util.Scanner;
 
 class EstadoAtendiendo implements EstadoRobot{
 
@@ -47,8 +48,24 @@ class EstadoAtendiendo implements EstadoRobot{
 
         System.out.println("Comenzando a leer el menu");
         robot.printMenu();
-        System.out.println("Comenzando a cocinar");
+
+        Scanner scanner = new Scanner(System.in);
+        int id;
+        while(true){
+            try{
+                System.out.println("Ingrese el id de la hamburguesa deseada");
+                id = scanner.nextInt();
+                robot.findBurguer(id);
+                System.out.println("Hamburguesa valida, pasando a estado Cocinando");
+                break;
+            }catch(InvalidIdException e){
+                System.out.println("El id que ingreso no es valido, intente de nuevo");
+            }catch(Exception e){
+                System.out.println("Asegurese de ingresar un numero, intente de nuevo");
+            }
+        }
         robot.setState(robot.getEstadoCocinando());
+
     }
 
     public void cocinar(){
