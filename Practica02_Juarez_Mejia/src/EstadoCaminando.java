@@ -1,5 +1,8 @@
 /**
  * Estado del robot mientras esta caminando hasta llegar al cliente o ser suspendido
+ * Para ayudar al usuario a familiarizarse con el modo de activaciones se ha agregado un modelo de un robot en ascii
+ * el cual ilustra cada uno de los estados posibles del robot mientras camina.
+ */
  */
 
  class EstadoCaminando implements EstadoRobot{
