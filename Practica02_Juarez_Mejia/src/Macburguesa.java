@@ -8,7 +8,7 @@ public class Macburguesa{
     * Identificador de hamburguesas de acuerdo a su posicion
     * en el menu.
     */
-  private int id;
+  private String id;
   
   
   
@@ -48,7 +48,7 @@ public class Macburguesa{
     */
   private boolean vegetariana;
 
-  public Macburguesa(int id, String nombre, String descripcion, double precio, boolean queso, boolean vegetariana){
+  public Macburguesa(String id, String nombre, String descripcion, double precio, boolean queso, boolean vegetariana){
 
     this.id = id;
     this.nombre = nombre;
@@ -59,7 +59,7 @@ public class Macburguesa{
 
   }
 
-  public int getId(){
+  public String getId(){
     return this.id;
   }
 

@@ -116,7 +116,7 @@ class Robot{
         while(iterator.hasNext()){
 
             Macburguesa mac = (Macburguesa)iterator.next();
-            int id = mac.getId();
+            String id = mac.getId();
             String nombre = mac.getNombre();
             String descripcion = mac.getDescripcion();
             System.out.println(id + " " + nombre + "\n" + descripcion);
@@ -124,7 +124,7 @@ class Robot{
     }
 
 
-    public void findBurguer(int id) throws InvalidIdException{
+    public void findBurguer(String id) throws InvalidIdException{
 
         MyIterator generalIterator = menuGeneral.createIterator();
         MyIterator delDiaIterator = menuDelDia.createIterator();
@@ -132,7 +132,7 @@ class Robot{
 
         while(generalIterator.hasNext()){
             Macburguesa ham = (Macburguesa)generalIterator.next();
-            if(id == ham.getId()){
+            if(id.equals(ham.getId())){
                 this.orden = ham;
                 return;
             }
@@ -141,7 +141,7 @@ class Robot{
         while(delDiaIterator.hasNext()){
             Macburguesa ham = (Macburguesa)delDiaIterator.next();
             
-            if(id == ham.getId()){
+            if(id.equals(ham.getId())){
                 this.orden = ham;
                 return;
             }
@@ -149,7 +149,7 @@ class Robot{
 
         while(deLujoIterator.hasNext()){
             Macburguesa ham = (Macburguesa)deLujoIterator.next();
-            if(id == ham.getId()){
+            if(id.equals(ham.getId())){
                 this.orden = ham;
                 return;
             }

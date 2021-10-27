@@ -6,37 +6,37 @@ class Main{
 
         Robot robot = new Robot();
 
-        int opcion = 1;
+        String opcion = "1";
 
         Scanner sc = new Scanner(System.in);
 
-        while(opcion != 0){
+        while(!opcion.equals("0")){
 
             System.out.println("----Menu de robot----");
             System.out.println(
-                "1- activar \n 2-caminar \n 3-atender \n 4-cocinar \n 5-suspender \n 0-salir" 
+                " 1- activar \n 2-caminar \n 3-atender \n 4-cocinar \n 5-suspender \n 0-salir" 
             );
 
-            opcion = sc.nextInt();
+            opcion = sc.nextLine();
 
             switch(opcion){
 
-                case 1:
+                case "1":
                 robot.activar();
                 break;
-                case 2: 
+                case "2": 
                 robot.caminar();
                 break;
-                case 3:
+                case "3":
                 robot.atender();
                 break;
-                case 4:
+                case "4":
                 robot.cocinar();
                 break;
-                case 5:
+                case "5":
                 robot.suspender();
                 break;
-                case 0:
+                case "0":
                 System.out.println("Vuelva pronto");
                 break;
                 default:

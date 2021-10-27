@@ -50,11 +50,11 @@ class EstadoAtendiendo implements EstadoRobot{
         robot.printMenu();
 
         Scanner scanner = new Scanner(System.in);
-        int id;
+        String id;
         while(true){
             try{
                 System.out.println("Ingrese el id de la hamburguesa deseada");
-                id = scanner.nextInt();
+                id = scanner.nextLine();
                 robot.findBurguer(id);
                 System.out.println("Hamburguesa valida, pasando a estado Cocinando");
                 break;
