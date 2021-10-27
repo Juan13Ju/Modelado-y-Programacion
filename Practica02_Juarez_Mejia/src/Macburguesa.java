@@ -48,6 +48,10 @@ public class Macburguesa{
     */
   private boolean vegetariana;
 
+   
+  /**
+    * Metodo que nos dice la informacion de una macburguesa
+    */
   public Macburguesa(int id, String nombre, String descripcion, double precio, boolean queso, boolean vegetariana){
 
     this.id = id;
@@ -59,22 +63,37 @@ public class Macburguesa{
 
   }
 
+  /**
+    * Regresa un int como el identificador de la macburguesa
+    */
   public int getId(){
     return this.id;
   }
 
+  /**
+    * Regresa un String con el nombre de la macburguesa
+    */
   public String getNombre(){
     return this.nombre;
   }
 
+  /**
+    * Regresa un String con la descripcion de la macburguesa
+    */
   public String getDescripcion(){
     return this.descripcion;
   }
 
+  /**
+    * Regresa un boolean que nos dice si una macburguesa es vegetariana
+    */
   public boolean getQueso(){
     return this.queso;
   }
 
+  /**
+    * Regresa un boolean que nos dice si una macburguesa es vegetariana
+    */
   public boolean getVegetariana(){
     return this.vegetariana;
   }
