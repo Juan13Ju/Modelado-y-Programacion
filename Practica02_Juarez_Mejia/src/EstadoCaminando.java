@@ -14,6 +14,9 @@
         this.robot = robot;
     }
 
+	/**
+     	* El robot esta encendido todo el tiempo esperando a que un cliente lo active, pero si no está trabajando puede estar suspendido 
+     	*/
     @Override
     public void activar(){
 
@@ -28,7 +31,11 @@
 	System.out.println(" [-]   [-]");
 
     }
-
+	 
+	/**
+     	* Cuando el robot esta activado este debe ir a la mesa del cliente, por lo que cambia su estado a
+	* caminar
+     	*/
     @Override
     public void caminar(){
 
@@ -62,7 +69,10 @@
 
         robot.setState(robot.getEstadoAtendiendo());
     }
-
+	 
+	/**
+	* Cuando el robot esta cocinando no puede caminar hasta la mesa para atender al cliente
+	*/
     @Override
     public void cocinar(){
 
@@ -78,6 +88,9 @@
 
      
     }
+	/**
+	* Cuando el robot esta caminando, este puede suspenderse
+	*/
 
     @Override
     public void suspender(){
