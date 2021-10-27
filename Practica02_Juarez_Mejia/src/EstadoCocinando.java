@@ -49,6 +49,7 @@ class EstadoCocinando implements EstadoRobot{
 
         System.out.println("Comenzando a cocinar su hamburguesa");
         robot.cocinar(robot.orden);
+        System.out.println("Regresando a estado suspendido");
         robot.setState(robot.getEstadoSuspendido());
     }
 

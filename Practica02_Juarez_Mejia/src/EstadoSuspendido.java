@@ -1,7 +1,7 @@
 /**
  * Estado en el cual el robot se encuentra suspendido, por lo cual solo se puede activar.
  * Para ayudar al usuario a familiarizarse con el modo de suspesion se ha agregado un modelo de un robot en ascii.
- * De esta forma el usuario podra diferenciar los diferentes estados de suspension en los que el robot no puede hacer
+ * De esta forma el usuario podra observar los diferentes estados de suspension en los que el robot no puede hacer
  * ciertas acciones.
  */
 

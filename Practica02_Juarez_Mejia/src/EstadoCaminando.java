@@ -1,5 +1,7 @@
 /**
  * Estado del robot mientras esta caminando hasta llegar al cliente o ser suspendido
+ * Para ayudar al usuario a familiarizarse con el modo de activaciones se ha agregado un modelo de un robot en ascii
+ * el cual ilustra cada uno de los estados posibles del robot mientras camina.
  */
 
  class EstadoCaminando implements EstadoRobot{
@@ -11,13 +13,28 @@
         this.robot = robot;
     }
 
+	/**
+     	* El robot esta encendido todo el tiempo esperando a que un cliente lo active, pero si no está trabajando puede estar suspendido 
+     	*/
     @Override
     public void activar(){
 
         System.out.println("El robot ya esta activado y caminando hacia el cliente");
+	System.out.println("    |_|");
+	System.out.println("   (_**)   *Se despierta*");
+	System.out.println("  __) (_");
+	System.out.println(" ( )...()");
+	System.out.println(" || | |||");
+	System.out.println(" || | |()__/");
+	System.out.println(" /|(___)");
+	System.out.println(" [-]   [-]");
 
     }
-
+	 
+	/**
+     	* Cuando el robot esta activado este debe ir a la mesa del cliente, por lo que cambia su estado a
+	* caminar
+     	*/
     @Override
     public void caminar(){
 
@@ -51,7 +68,10 @@
 
         robot.setState(robot.getEstadoAtendiendo());
     }
-
+	 
+	/**
+	* Cuando el robot esta cocinando no puede caminar hasta la mesa para atender al cliente
+	*/
     @Override
     public void cocinar(){
 
@@ -67,6 +87,9 @@
 
      
     }
+	/**
+	* Cuando el robot esta caminando, este puede suspenderse
+	*/
 
     @Override
     public void suspender(){
