@@ -1,3 +1,7 @@
+/**
+ * Clase que define las hamburguesas del menu del dia
+ */
+
 import java.util.ArrayList;
 
 class MenuDelDia implements Menu{
