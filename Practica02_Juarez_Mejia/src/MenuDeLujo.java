@@ -1,9 +1,12 @@
+/**
+ * Clase que define las hamburguesas del menu de lujo
+ */
 import java.util.Hashtable;
 
 class MenuDeLujo implements Menu{
 
     /**
-     * HashTable donde se almacenan las hamburguesas del menu
+     * HashTable donde se almacenan las hamburguesas del menu de lujo
      */
     Hashtable<Integer, Macburguesa> menu;
 
