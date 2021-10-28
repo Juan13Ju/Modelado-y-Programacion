@@ -1,5 +1,5 @@
 /**
- * Clase que define las hamburguesas del menu del dia
+ * Clase que representa el menu del dia del restaurante
  */
 
 import java.util.ArrayList;
@@ -7,10 +7,14 @@ import java.util.ArrayList;
 class MenuDelDia implements Menu{
 
     /**
-     * ArrayList con las hamburguesas del dia
+     * El menu de hamburguesas contenido en un arraylist
      */
     ArrayList<Macburguesa> menu;
 
+    /**
+     * Constructor para el menu del dia
+     * @param menu Un arraylist representando el menu del dia
+     */
     public MenuDelDia(){
 
         Macburguesa libra = new Macburguesa("4","Macburger de libra", "Hamburguesa de 1/4 de libra de carne", 59.99, false, false);
@@ -27,6 +31,10 @@ class MenuDelDia implements Menu{
         this.menu = menu;
     }
 
+    /**
+     * Regresa un iterador del Menu del dia
+     * @return Objeto de tipo iterador para el Menu del dia
+     */
     public MyIterator createIterator(){
 
         return new MenuDelDiaIterator(menu);
