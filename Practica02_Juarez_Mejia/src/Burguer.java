@@ -2,7 +2,7 @@ public abstract class Burguer{
 
     protected Macburguesa hamburguesa;
 
-    // Metodo template
+    // El metodo construrctor sera el metodo template de la clase
     public Burguer(Macburguesa ham){
 
         this.hamburguesa = ham;
@@ -12,7 +12,7 @@ public abstract class Burguer{
         prepararCarne();
         ponerCarne();
 
-        // Metodo hook de la clase 
+        // Metodo hook de la clase
         if(ham.getQueso()){
             ponerQueso();
         }
@@ -36,6 +36,7 @@ public abstract class Burguer{
         System.out.println("Embarrandole mostaza...");
     }
 
+    // Los metodos abstractos
     public abstract void prepararCarne();
 
     public abstract void ponerCarne();
