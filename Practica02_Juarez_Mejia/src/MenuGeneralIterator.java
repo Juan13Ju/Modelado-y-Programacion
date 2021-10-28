@@ -1,3 +1,6 @@
+/**
+ * Iterador de la clase que define las hamburguesas del menu general
+ */
 class MenuGeneralIterator implements MyIterator{
 
     /**
@@ -15,12 +18,18 @@ class MenuGeneralIterator implements MyIterator{
         this.position = 0;
     }
 
+    /**
+     * Devuelve verdadero si la estructura de datos tiene un elemento siguiente
+     */
     @Override
     public boolean hasNext(){
 
         return position < menu.length;
     }
 
+    /**
+     * Devuelve el objeto siguiente
+     */
     @Override
     public Macburguesa next(){
 
