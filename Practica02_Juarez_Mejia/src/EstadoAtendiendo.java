@@ -15,6 +15,10 @@ class EstadoAtendiendo implements EstadoRobot{
         this.robot = robot;
     }
 
+	/**
+     	* Cuando el robot se encuentra en la mesa del cliente no es necesario volver a prenderlo ya que su estado
+     	* es atender y no entrara en suspension hasta tener la orden
+	*/
     @Override
     public void activar(){
 
@@ -29,6 +33,10 @@ class EstadoAtendiendo implements EstadoRobot{
 	System.out.println("   [-]   [-]");
     }
 
+	/**
+     	* Cuando el robot se encuentra atendiendo un cliente no puede cambiar su estado a caminar
+	* ya que seria grosero si lo hiciera
+	*/
     @Override
     public void caminar(){
 
@@ -45,6 +53,9 @@ class EstadoAtendiendo implements EstadoRobot{
 	System.out.println(" [-]   [-]        (_(___]");
     }
 
+	/**
+     	* Cuando el robot se encuentra atendiendo un cliente le mostrara el menu para que pueda elegir su pedido
+	*/
     public void atender(){
 
         System.out.println("Comenzando a leer el menu");
@@ -77,6 +88,9 @@ class EstadoAtendiendo implements EstadoRobot{
 
     }
 
+	/**
+     	* Cuando el robot se encuentra atendiendo no podra cambiar de estado a cocinar sin tener la orden antes
+	*/
     public void cocinar(){
 
         System.out.println("El robot no puede cocinar sin una orden recibida");
@@ -89,6 +103,10 @@ class EstadoAtendiendo implements EstadoRobot{
 	
     }
 
+	/**
+     	* Cuando el robot se encuentra atendiendo un cliente no puede cambiar su estado a suspenderse
+	* ya que seria grosero si lo hiciera y ademas el cliente se moriria de hambre
+	*/
     public void suspender(){
 
         System.out.println("El robot no se puede suspender mientras atiende a un cliente");
