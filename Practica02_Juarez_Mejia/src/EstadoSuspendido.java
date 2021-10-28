@@ -14,6 +14,9 @@ class EstadoSuspendido implements EstadoRobot{
         this.robot = robot;
     }
 
+	/**
+ 	* El robot debe estar encendido todo el tiempo esperando a que un cliente lo active, pero si no está trabajando puede estar suspendido. 
+ 	*/
     @Override
     public void activar(){
 
@@ -30,6 +33,9 @@ class EstadoSuspendido implements EstadoRobot{
         robot.setState(robot.getEstadoCaminando());
     }
 
+	/**
+ 	* El robot se encuentra suspendido por lo que no puede cambiar de estado a caminar 
+ 	*/
     @Override
     public void caminar(){
 
@@ -44,6 +50,9 @@ class EstadoSuspendido implements EstadoRobot{
 	System.out.println(" [-]   [-]");
     }
 
+	/**
+ 	* El robot se encuentra suspendido por lo que no puede cambiar de estado a atender
+ 	*/
     @Override
     public void atender(){
 
@@ -59,6 +68,9 @@ class EstadoSuspendido implements EstadoRobot{
 
     }
 
+	/**
+ 	* El robot se encuentra suspendido por lo que no puede cambiar de estado a cocinar
+ 	*/
     @Override
     public void cocinar(){
 
@@ -71,11 +83,14 @@ class EstadoSuspendido implements EstadoRobot{
 	    System.out.println(" |'   ^   `|");
     }
 
+	/**
+ 	* El robot se encuentra suspendido por lo que no es necesario suspenderlo de nuevo
+ 	*/
     public void suspender(){
 
         System.out.println("El robot ya se encuentra suspendido");
 	System.out.println("      |_|");
-	System.out.println("     (* *)   A mimir again");
+	System.out.println("     (* *)  Deje mimir agusto");
 	System.out.println("    __) (__");
 	System.out.println("   ( )...( )(_)");
 	System.out.println("   || |_| ||//");

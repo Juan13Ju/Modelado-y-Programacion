@@ -1,12 +1,19 @@
+/**
+ * Clase que representa el menu de lujo del restaurante
+ */
 import java.util.Hashtable;
 
 class MenuDeLujo implements Menu{
 
     /**
-     * HashTable donde se almacenan las hamburguesas del menu
+     * HashTable donde se almacenan las hamburguesas del menu de lujo
      */
     Hashtable<Integer, Macburguesa> menu;
 
+    /**
+     * Constructor para el menu de lujo
+     * @param menu Un hashtable representando el menu de lujo
+     */
     public MenuDeLujo(){
 
         Macburguesa bbq = new Macburguesa("9","Mcburger BBQ", "Hamburguesa de carne de res con salsa BBQ", 89.40, true, false);
@@ -20,6 +27,10 @@ class MenuDeLujo implements Menu{
         this.menu = menu;
     }
 
+    /**
+     * Regresa un iterador del Menu de lujo
+     * @return Objeto de tipo iterador para el Menu de lujo
+     */
     @Override
     public MyIterator createIterator(){
 

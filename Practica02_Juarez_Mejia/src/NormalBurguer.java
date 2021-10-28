@@ -1,5 +1,11 @@
+/**
+ * Sub clase que define las caracteristicas de las hamburguesas de MacBurguesa que no son vegetarianas
+ */
 class NormalBurguer extends Burguer{
-
+    
+    /**
+     * Constructor para la hamburguesa con carne o normal
+     */
     public NormalBurguer(Macburguesa ham){
         super(ham);
     }

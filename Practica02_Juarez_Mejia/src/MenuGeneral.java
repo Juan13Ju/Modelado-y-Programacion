@@ -10,7 +10,7 @@ class MenuGeneral implements Menu{
 
     /**
      * Constructor para el menu general
-     * @param menu Un arreglo representando el menu
+     * @param menu Un arreglo representando el menu general
      */
     public MenuGeneral(){
 
