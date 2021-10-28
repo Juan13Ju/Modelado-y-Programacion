@@ -1,5 +1,5 @@
 /**
- * Clase que define las hamburguesas del menu de lujo
+ * Clase que representa el menu de lujo del restaurante
  */
 import java.util.Hashtable;
 
@@ -12,7 +12,7 @@ class MenuDeLujo implements Menu{
 
     /**
      * Constructor para el menu de lujo
-     * @param menu Un hashtable representando el menu
+     * @param menu Un hashtable representando el menu de lujo
      */
     public MenuDeLujo(){
 
