@@ -1,3 +1,7 @@
+/**
+ * Iterador de la clase que define las hamburguesas del menu de lujo
+ */
+
 import java.util.Set;
 import java.util.Hashtable;
 import java.util.Iterator;
@@ -26,12 +30,18 @@ class MenuDeLujoIterator implements MyIterator{
         this.setIterator = llaves.iterator(); 
     }
 
+    /**
+     * Devuelve verdadero si la estructura de datos tiene un elemento siguiente
+     */
     @Override
     public boolean hasNext(){
 
         return setIterator.hasNext();
     }
 
+    /**
+     * Devuelve el objeto siguiente
+     */
     @Override
     public Object next(){
 
