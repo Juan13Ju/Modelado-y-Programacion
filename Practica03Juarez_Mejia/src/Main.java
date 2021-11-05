@@ -14,7 +14,7 @@ class Main{
         Baguette bag = null;
         boolean selectedBread = false;
         while(!selectedBread){
-            System.out.println("Seleccione el tipo de pan que desea");
+            System.out.println("Seleccione el tipo de pan que deseas para tu baguette");
             System.out.println("\n 1- Pan de ajo \n 2- Pan blanco \n 3- Pan Integral");
             String op = sc.nextLine();
             switch(op){
@@ -37,7 +37,7 @@ class Main{
         
         boolean endedOrder = false;
         while(!endedOrder){
-            System.out.println("Seleccione los ingredientes que desea agregar");
+            System.out.println("Seleccione los ingredientes que desea agregar a tu baguette");
             System.out.println("\n 1- Pollo \n 2- Pepperoni \n 3- Jamon \n 4- Lechuga \n 5- Jitomate \n 6- Cebolla \n 7- Mostaza \n 8- Catsup \n 9- Mayonesa \n 10- Terminar");
             String op = sc.nextLine();
             switch(op){
@@ -76,6 +76,7 @@ class Main{
             }
         }
         System.out.println("---Imprimiendo ticket---");
+        System.out.println("---Muchas gracias por su compra---");
         bag.printTicket();
     }
 
@@ -120,6 +121,7 @@ class Main{
 
         PizzaAdapter adapter = new PizzaAdapter(pizza);
         System.out.println("---Imprimiendo ticket---");
+        System.out.println("---Muchas gracias por su compra---");
         adapter.printTicket();
     }
 
@@ -129,7 +131,9 @@ class Main{
         String op = "1";
 
         while(!op.equals("0")){
-            System.out.println("Bienvenido a WaySub! Tenemos baguettes y pizzas, selecciona la opcion que deseas");
+            System.out.println("Bienvenido a WaySub! ft. Pizzas de Don Cangrejo);
+            System.out.println("Ahora con pizzas ademas de nuestros deliciosos baguettes");
+            System.out.println("Selecciona la opcion que deseas comer hoy);
             System.out.println("\n 1- Baguette \n 2- Pizza \n 0- Salir");
             op = sc.nextLine();
             switch(op){
