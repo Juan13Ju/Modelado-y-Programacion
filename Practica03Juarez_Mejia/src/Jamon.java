@@ -5,7 +5,7 @@ class Jamon extends BaguetteDecorator{
 
     Baguette bg;
 
-    public Jamon(){
+    public Jamon(Baguette bg){
 
         this.bg = bg;
     }

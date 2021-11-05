@@ -21,4 +21,12 @@ public abstract class Baguette{
      * @return El costo del producto
      */
     public abstract double costo();
+
+    /**
+     * Metodo para imprimir le ticket de la orden
+     * @return Un string con la descripcion del producto y su costo
+     */
+    public void printTicket(){
+        System.out.println(this.getDescription() + "\n" + this.costo());
+    }
 }
