@@ -12,7 +12,7 @@ class PizzaAdapter extends Baguette{
         String queso = pizza.getQueso();
         String carne = pizza.getCarne();
         String masa = pizza.getMasa();
-        return "Pizza de " + masa + " con queso " + queso + " y " + carne;
+        return "Lista de ingredientes: \n " + masa + " ,queso " + queso + " y " + carne;
     }
 
     @Override
