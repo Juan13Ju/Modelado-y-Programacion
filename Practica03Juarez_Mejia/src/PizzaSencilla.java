@@ -1,5 +1,5 @@
 /**
- * Clase para representar una pizza de salchicha
+ * Clase para representar una pizza de sencilla
  */
 class PizzaSencilla extends Pizza{
 
