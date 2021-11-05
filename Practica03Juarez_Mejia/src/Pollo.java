@@ -16,7 +16,7 @@ class Pollo extends BaguetteDecorator{
     @Override
     public String getDescription(){
 
-        return bg.getDescription() + " ,pollo";
+        return bg.getDescription() + " , pollo";
     }
     
 /**
