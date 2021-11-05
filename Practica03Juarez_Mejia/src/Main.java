@@ -1,11 +1,14 @@
 import java.util.Scanner;
 
-import javax.xml.stream.events.EndElement;
 /**
  * Clase que simula el funcionamiento del restaurant WaySub
  */
-class WaySub{
+class Main{
 
+    /**
+     * Menu para imprimir el menu de baguette e imprimir el ticket de compra
+     * @param sc Scanner para tomar el input del usuario
+     */
     static void menuBaguette(Scanner sc){
 
         Baguette bag = null;
@@ -35,7 +38,7 @@ class WaySub{
         boolean endedOrder = false;
         while(!endedOrder){
             System.out.println("Seleccione los ingredientes que desea agregar");
-            System.out.println("\n 1- Pollo \n 2- Pepperoni \n 3- Jamon \n 4- Lechuga \n 5- Jitomate \n 6- Cebolla \n 7- Mostaza \n 8- Catsup \n 9- Mayonesa 10- Terminar");
+            System.out.println("\n 1- Pollo \n 2- Pepperoni \n 3- Jamon \n 4- Lechuga \n 5- Jitomate \n 6- Cebolla \n 7- Mostaza \n 8- Catsup \n 9- Mayonesa \n 10- Terminar");
             String op = sc.nextLine();
             switch(op){
                 case "1":
@@ -72,8 +75,52 @@ class WaySub{
                 System.out.println("Opcion no valida");
             }
         }
-
+        System.out.println("---Imprimiendo ticket---");
         bag.printTicket();
+    }
+
+    /**
+     * Menu para imprimir el menu de las pizzas e imprimir el ticket de compra
+     * @param sc Scanner para poder tomar el input del usuario
+     */
+    static void menuPizza(Scanner sc){
+
+        Pizza pizza = null;
+        boolean endedOrder = false;
+        while(!endedOrder){
+
+            System.out.println("Elige una de nuestas 5 pizzas");
+            System.out.println("\n 1- Pizza Sencilla \n 2- Pizza Deluxe \n 3- Pizza de Salchicha \n 4- Pizza de Jamon \n 5- Pizza de Pollo");
+            String op = sc.nextLine();
+            switch(op){
+                case "1":
+                pizza = new PizzaSencilla();
+                endedOrder = true;
+                break;
+                case "2":
+                pizza = new PizzaDeluxe();
+                endedOrder = true;
+                break;
+                case "3":
+                pizza = new PizzaSalchicha();
+                endedOrder = true;
+                break;
+                case "4":
+                pizza = new PizzaJamon();
+                endedOrder = true;
+                break;
+                case "5":
+                pizza = new PizzaPollo();
+                endedOrder = true;
+                break;
+                default: 
+                System.out.println("Orden no valida, intente de nuevo");
+            }
+        }
+
+        PizzaAdapter adapter = new PizzaAdapter(pizza);
+        System.out.println("---Imprimiendo ticket---");
+        adapter.printTicket();
     }
 
     public static void main(String[] args){
@@ -89,7 +136,9 @@ class WaySub{
                 case "1":
                 menuBaguette(sc);
                 break;
-                // TODO : Agregar el menuPizza
+                case "2":
+                menuPizza(sc);
+                break;
                 case "0":
                 System.out.println("Vuelva pronto!");
                 break;
