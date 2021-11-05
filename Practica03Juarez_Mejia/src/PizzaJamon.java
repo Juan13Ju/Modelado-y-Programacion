@@ -1,3 +1,6 @@
+/**
+ * Clase para representar una pizza de jamon
+ */
 class PizzaJamon extends Pizza{
 
     public PizzaJamon(){
