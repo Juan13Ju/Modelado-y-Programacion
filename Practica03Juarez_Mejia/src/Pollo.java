@@ -10,12 +10,18 @@ class Pollo extends BaguetteDecorator{
         this.bg = bg;
     }
 
+/**
+ * Metodo que da la descripcion del ingrediente
+ */
     @Override
     public String getDescription(){
 
         return bg.getDescription() + " ,pollo";
     }
-
+    
+/**
+ * Metodo que da el precio del ingrediente
+ */
     @Override
     public double costo(){
         
