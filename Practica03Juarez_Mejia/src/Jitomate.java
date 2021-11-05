@@ -1,7 +1,7 @@
 /**
  * Clase que representa al jitomate como ingrediente de una baguette
  */
-class Pollo extends BaguetteDecorator{
+class Jitomate extends BaguetteDecorator{
     
     Baguette bg;
 
