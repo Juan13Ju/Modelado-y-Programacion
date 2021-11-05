@@ -13,7 +13,7 @@ public abstract class Baguette{
      * @return La descripicion del producto
      */
     public String getDescription(){
-        return this.description;
+        return " Lista de ingeredientes: \n " + this.description;
     }
 
     /**
@@ -27,6 +27,6 @@ public abstract class Baguette{
      * @return Un string con la descripcion del producto y su costo
      */
     public void printTicket(){
-        System.out.println(this.getDescription() + "\n" + this.costo());
+        System.out.println(this.getDescription() + "\n" + "Costo: $" + this.costo());
     }
 }
