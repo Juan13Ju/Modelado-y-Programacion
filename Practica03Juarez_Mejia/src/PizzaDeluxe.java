@@ -1,3 +1,7 @@
+/**
+ * Clase para representar una pizza deluxe
+ */
+
 class PizzaDeluxe extends Pizza{
 
     public PizzaDeluxe(){
