@@ -1,3 +1,6 @@
+/**
+ * Clase para representar una pizza de salchicha
+ */
 class PizzaSencilla extends Pizza{
 
     public PizzaSencilla(){
