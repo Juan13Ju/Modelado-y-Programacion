@@ -125,6 +125,9 @@ class Main{
         adapter.printTicket();
     }
 
+/**
+ * Clase que interactua con el usuario para saber que desea ordenar
+ */
     public static void main(String[] args){
         Scanner sc = new Scanner(System.in);
 
