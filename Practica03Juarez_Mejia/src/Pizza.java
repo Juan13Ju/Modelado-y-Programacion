@@ -30,6 +30,9 @@ public abstract class Pizza{
         return this.masa;
     }
 
+    /**
+     * @return El costo de la pizza
+     */
     public double getCosto(){
         return this.costo;
     }
