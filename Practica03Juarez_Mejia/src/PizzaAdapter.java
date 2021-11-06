@@ -1,3 +1,8 @@
+
+/**
+ * Clase adapter para recrear el comportamiento del ticket de baguette
+ * utilizando los metodos ya existentes en la clase pizza
+ */
 class PizzaAdapter extends Baguette{
 
     Pizza pizza;
@@ -7,6 +12,9 @@ class PizzaAdapter extends Baguette{
         this.pizza = pizza;
     }
 
+    /**
+     * @return La descripicion de la pizza
+     */
     @Override
     public String getDescription(){
         String queso = pizza.getQueso();
@@ -15,6 +23,9 @@ class PizzaAdapter extends Baguette{
         return "Lista de ingredientes: \n " + masa + " ,queso " + queso + " y " + carne;
     }
 
+    /**
+     * @return El costo de la pizza
+     */
     @Override
     public double costo(){
         return pizza.getCosto();
