@@ -14,6 +14,14 @@ class FabricaArma extends AbstractFactory{
 
             case "arpones":
             return new ArmaArpones();
+            case "lanzallamas":
+            return new ArmaLanzallamas();
+            case "cañones":
+            return new ArmaCañones;
+            case "sierra":
+            return new ArmaSierra();
+            case "metralleta":
+            return new ArmaMetralleta();
             default: 
             System.out.println("Componente no valido");
             return null;
