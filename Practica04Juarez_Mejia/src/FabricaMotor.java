@@ -13,6 +13,10 @@ class FabricaMotor extends AbstractFactory{
         switch(tipoMotor){
             case "deportivo":
             return new MotorDeportivo();
+            case "diesel":
+            return new MotorDiesel();
+            case "turbo":
+            return new MotorTurbo();
             default:
             return null;
         }
