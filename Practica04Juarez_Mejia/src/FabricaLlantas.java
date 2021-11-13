@@ -18,6 +18,12 @@ class FabricaLlantas extends AbstractFactory{
 
             case "simple":
             return new LlantaSimple();
+            case "deportivo":
+            return new LlantaDeportiva();
+            case "todoterreno":
+            return new LlantaTodoterreno();
+            case "oruga":
+            return new LlantaOruga();
             default:
             System.out.println("Componente no existente");
             return null;
