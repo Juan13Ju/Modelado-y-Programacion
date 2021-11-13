@@ -13,6 +13,10 @@ class FabricaBlindaje extends AbstractFactory{
         switch(tipoBlindaje){
             case "simple":
             return new BlindajeSimple();
+            case "reforzado":
+            return new BlindajeReforzado();
+            case "tanque":
+            return new BlindajeTanque();
             default:
             System.out.println("Componente no valido");
             return null;
