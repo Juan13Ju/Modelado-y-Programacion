@@ -14,6 +14,10 @@ class FabricaCarroceria extends AbstractFactory{
 
             case "casual":
             return new CarroceriaCasual();
+            case "camion":
+            return new CarroceriaCamion();
+            case "deportiva"
+            return new CarroceriaDeportiva();
             default:
             System.out.println("Componente no existente");
             return null;
