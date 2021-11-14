@@ -1,8 +1,8 @@
-class ArmaCañones extends ComponenteCarro implements Arma{
+class ArmaCanones extends ComponenteCarro implements Arma{
 
     String tipo = " ";
 
-    public ArmaCañones(){
+    public ArmaCanones(){
         super(80, 12, 60, 59);
     }
 
