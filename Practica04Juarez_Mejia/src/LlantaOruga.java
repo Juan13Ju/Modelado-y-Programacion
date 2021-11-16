@@ -6,7 +6,7 @@ public class LlantaOruga extends ComponenteCarro implements Llanta{
     String tipo = " ";
 
     public LlantaOruga(){
-        //Los atributos de ataque, defensa, velocidad y costo de la llanta
+        //Los atributos de ataque, defensa, velocidad y costo de la llantaOruga
         super(70, 90, 36, 100);
     }
 
