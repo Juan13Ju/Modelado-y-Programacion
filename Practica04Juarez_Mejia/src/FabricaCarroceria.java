@@ -1,3 +1,6 @@
+/**
+ * Clase que nos permite crear objetos de tipo Carroceria dependiendo del tipo de carroceria que se desee
+ */
 class FabricaCarroceria extends AbstractFactory{
 
     @Override
