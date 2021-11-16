@@ -6,6 +6,7 @@ public class ArmaSierra extends ComponenteCarro implements Arma{
     String tipo = " ";
 
     public ArmaSierra(){
+        // Los atributos ataque, defensa, velocidad y costo de la sierra
         super(30, 0, 70, 12);
     }
 
