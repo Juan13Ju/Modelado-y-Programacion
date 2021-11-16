@@ -1,5 +1,5 @@
 /**
- * Clase abstracta que representa un arma
+ * Clase que representa un arma
  */
 public interface Arma{
 
