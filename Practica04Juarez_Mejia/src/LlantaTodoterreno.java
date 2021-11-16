@@ -1,21 +1,26 @@
-
+/**
+ * Clase que representa a LlantaTodoterreno como un componente de carro y un tipo de llanta
+ */
 public class LlantaTodoterreno extends ComponenteCarro implements Llanta{
 
     String tipo = " ";
 
     public LlantaTodoterreno(){
-        // Aqui guardamos los atributos de ataque, defensa, velocidad y costo de la llanta
+        //Los atributos de ataque, defensa, velocidad y costo de la llantaTodoterreno
         super(40, 37, 70, 80);
     }
-
-    /**
-     * Indicamos el tipo de llanta que es para despues poder imprimirlo
-     */
+    
+ /**
+ * Metodo que crea una llanta del tipo todoterreno
+ */
     @Override
     public void crearLlanta(){
         tipo = "Llanta Todoterreno";
     }
 
+/**
+ * Metodo que da el tipo de llanta
+ */
     @Override
     public void getTipo(){
         System.out.println(tipo);
