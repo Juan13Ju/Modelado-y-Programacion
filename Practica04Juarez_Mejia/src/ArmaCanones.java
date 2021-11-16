@@ -6,6 +6,7 @@ public class ArmaCanones extends ComponenteCarro implements Arma{
     String tipo = " ";
 
     public ArmaCanones(){
+        // Los atributos ataque, defensa, velocidad y costo de los cañones
         super(80, 12, 60, 59);
     }
 
