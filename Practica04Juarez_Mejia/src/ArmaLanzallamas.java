@@ -6,6 +6,7 @@ public class ArmaLanzallamas extends ComponenteCarro implements Arma{
     String tipo = " ";
 
     public ArmaLanzallamas(){
+        // Los atributos ataque, defensa, velocidad y costo del lanzallamas
         super(60, 78, 90, 85);
     }
 
