@@ -1,3 +1,6 @@
+/**
+ * Clase que nos permite crear objetos de tipo Blindaje dependiendo del tipo de blindaje que se desee
+ */
 class FabricaBlindaje extends AbstractFactory{
 
     @Override
