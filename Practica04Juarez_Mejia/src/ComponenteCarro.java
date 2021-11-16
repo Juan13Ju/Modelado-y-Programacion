@@ -16,20 +16,31 @@ public abstract class ComponenteCarro{
         this.velocidad = velocidad;
         this.costo = costo;
     }
-
-    // Metodos getters
+    
+/**
+ * Metodo que da el valor de ataque
+ */
     public int getAtaque(){
         return this.ataque;
     }
-
+    
+/**
+ * Metodo que da el valor de defensa
+ */
     public int getDefensa(){
         return this.defensa;
     }
-
+    
+/**
+ * Metodo que da el valor de velocidad
+ */
     public int getVelocidad(){
         return this.velocidad;
     }
-
+    
+/**
+ * Metodo que da el valor de costo
+ */
     public int getCosto(){
         return this.costo;
     }
