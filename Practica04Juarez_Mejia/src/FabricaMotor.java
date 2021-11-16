@@ -1,3 +1,6 @@
+/**
+ * Clase que nos permite crear objetos de tipo Motor dependiendo del tipo de motor que se desee
+ */
 class FabricaMotor extends AbstractFactory{
 
     @Override
