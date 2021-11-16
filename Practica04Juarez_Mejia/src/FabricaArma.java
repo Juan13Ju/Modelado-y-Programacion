@@ -1,4 +1,3 @@
-
 /**
  * Clase que nos permite crear objetos de tipo Arma dependiendo del tipo de arma que se desee
  */
