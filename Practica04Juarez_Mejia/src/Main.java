@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-class FabricaMadMax {
+class Main {
 
     static AbstractFactory fabricaLlantas = FabricaAutos.getFactory("llantas");
     static AbstractFactory fabricaMotor = FabricaAutos.getFactory("motor");
@@ -26,43 +26,27 @@ class FabricaMadMax {
 
         switch (tipoAuto) {
         case "ninja":
-            llantas = (Llanta) fabricaLlantas.getComponente("deportiva");
-            motor = (Motor) fabricaMotor.getComponente("deportivo");
-            carroceria = (Carroceria) fabricaCarroceria.getComponente("deportiva");
-            blindaje = (Blindaje) fabricaBlindaje.getComponente("simple");
-            arma = (Arma) fabricaArma.getComponente("sierra");
-            break;
-                
-        case "buzo":
-            llantas = (Llanta) fabricaLlantas.getComponente("todoterreno");
-            motor = (Motor) fabricaMotor.getComponente("turbo");
-            carroceria = (Carroceria) fabricaCarroceria.getComponente("camion");
-            blindaje = (Blindaje) fabricaBlindaje.getComponente("tanque");
-            arma = (Arma) fabricaArma.getComponente("arpones");
+            llantas = (Llanta)fabricaLlantas.getComponente("deportivo");
+            motor = (Motor)fabricaMotor.getComponente("deportivo");
+            carroceria = (Carroceria)fabricaCarroceria.getComponente("deportiva");
+            blindaje = (Blindaje)fabricaBlindaje.getComponente("simple");
+            arma = (Arma)fabricaArma.getComponente("sierra");
             break;
         
-        case "soldado":
+        case "tanque":
             llantas = (Llanta) fabricaLlantas.getComponente("oruga");
-            motor = (Motor) fabricaMotor.getComponente("diesel");
-            carroceria = (Carroceria) fabricaCarroceria.getComponente("camion");
-            blindaje = (Blindaje) fabricaBlindaje.getComponente("tanque");
-            arma = (Arma) fabricaArma.getComponente("metralleta");
+            motor = (Motor)fabricaMotor.getComponente("diesel");
+            carroceria = (Carroceria)fabricaCarroceria.getComponente("camion");
+            blindaje = (Blindaje)fabricaBlindaje.getComponente("tanque");
+            arma = (Arma)fabricaArma.getComponente("metralleta");
             break;
                 
-        case "corredor":
-            llantas = (Llanta) fabricaLlantas.getComponente("deportiva");
-            motor = (Motor) fabricaMotor.getComponente("deportivo");
-            carroceria = (Carroceria) fabricaCarroceria.getComponente("deportiva");
-            blindaje = (Blindaje) fabricaBlindaje.getComponente("simple");
-            arma = (Arma) fabricaArma.getComponente("lanzallamas");
-            break;
-                
-        case "pirata":
-            llantas = (Llanta) fabricaLlantas.getComponente("simple");
-            motor = (Motor) fabricaMotor.getComponente("diesel");
-            carroceria = (Carroceria) fabricaCarroceria.getComponente("casual");
-            blindaje = (Blindaje) fabricaBlindaje.getComponente("reforzado");
-            arma = (Arma) fabricaArma.getComponente("canones");
+        case "balanceado":
+            llantas = (Llanta)fabricaLlantas.getComponente("simple");
+            motor = (Motor)fabricaMotor.getComponente("diesel");
+            carroceria = (Carroceria)fabricaCarroceria.getComponente("casual");
+            blindaje = (Blindaje)fabricaBlindaje.getComponente("reforzado");
+            arma = (Arma)fabricaArma.getComponente("cañones");
             break;
 
             
@@ -115,7 +99,7 @@ class FabricaMadMax {
                 // el costo del componente se "devuelva" y despues se resta el costo del
                 // componente nuevo
                 if (llantas != null) {
-                    costoActual -= ((ComponenteCarro) llantas).getCosto();
+                    costoActual -= ((ComponenteCarro)llantas).getCosto();
                 }
                 llantas = construirLlanta(sc);
                 llantas.crearLlanta();
@@ -123,7 +107,7 @@ class FabricaMadMax {
                 break;
             case "2":
                 if (motor != null) {
-                    costoActual -= ((ComponenteCarro) motor).getCosto();
+                    costoActual -= ((ComponenteCarro)motor).getCosto();
                 }
                 motor = construirMotor(sc);
                 motor.crearMotor();
@@ -131,7 +115,7 @@ class FabricaMadMax {
                 break;
             case "3":
                 if (carroceria != null) {
-                    costoActual -= ((ComponenteCarro) carroceria).getCosto();
+                    costoActual -= ((ComponenteCarro)carroceria).getCosto();
                 }
                 carroceria = construirCarroceria(sc);
                 carroceria.crearCarroceria();
@@ -139,7 +123,7 @@ class FabricaMadMax {
                 break;
             case "4":
                 if (blindaje != null) {
-                    costoActual -= ((ComponenteCarro) blindaje).getCosto();
+                    costoActual -= ((ComponenteCarro)blindaje).getCosto();
                 }
                 blindaje = construirBlindaje(sc);
                 blindaje.crearBlindaje();
@@ -147,7 +131,7 @@ class FabricaMadMax {
                 break;
             case "5":
                 if (arma != null) {
-                    costoActual -= ((ComponenteCarro) arma).getCosto();
+                    costoActual -= ((ComponenteCarro)arma).getCosto();
                 }
                 arma = construirArma(sc);
                 arma.crearArma();
@@ -199,13 +183,13 @@ class FabricaMadMax {
             opcion = sc.nextLine();
             switch (opcion) {
             case "1":
-                return (Llanta) fabricaLlantas.getComponente("simple");
+                return (Llanta)fabricaLlantas.getComponente("simple");
             case "2":
-                return (Llanta) fabricaLlantas.getComponente("deportivo");
+                return (Llanta)fabricaLlantas.getComponente("deportivo");
             case "3":
-                return (Llanta) fabricaLlantas.getComponente("todoterreno");
+                return (Llanta)fabricaLlantas.getComponente("todoterreno");
             case "4":
-                return (Llanta) fabricaLlantas.getComponente("oruga");
+                return (Llanta)fabricaLlantas.getComponente("oruga");
             default:
                 System.out.println("Opcion no valida");
             }
@@ -229,11 +213,11 @@ class FabricaMadMax {
             opcion = sc.nextLine();
             switch (opcion) {
             case "1":
-                return (Motor) fabricaMotor.getComponente("deportivo");
+                return (Motor)fabricaMotor.getComponente("deportivo");
             case "2":
-                return (Motor) fabricaMotor.getComponente("diesel");
+                return (Motor)fabricaMotor.getComponente("diesel");
             case "3":
-                return (Motor) fabricaMotor.getComponente("turbo");
+                return (Motor)fabricaMotor.getComponente("turbo");
             default:
                 System.out.println("Opcion no valida");
             }
@@ -256,11 +240,11 @@ class FabricaMadMax {
             opcion = sc.nextLine();
             switch (opcion) {
             case "1":
-                return (Carroceria) fabricaCarroceria.getComponente("casual");
+                return (Carroceria)fabricaCarroceria.getComponente("casual");
             case "2":
-                return (Carroceria) fabricaCarroceria.getComponente("camion");
+                return (Carroceria)fabricaCarroceria.getComponente("camion");
             case "3":
-                return (Carroceria) fabricaCarroceria.getComponente("deportiva");
+                return (Carroceria)fabricaCarroceria.getComponente("deportiva");
             default:
                 System.out.println("Componente no existente");
             }
@@ -285,11 +269,11 @@ class FabricaMadMax {
 
             switch (opcion) {
             case "1":
-                return (Blindaje) fabricaBlindaje.getComponente("simple");
+                return (Blindaje)fabricaBlindaje.getComponente("simple");
             case "2":
-                return (Blindaje) fabricaBlindaje.getComponente("reforzado");
+                return (Blindaje)fabricaBlindaje.getComponente("reforzado");
             case "3":
-                return (Blindaje) fabricaBlindaje.getComponente("tanque");
+                return (Blindaje)fabricaBlindaje.getComponente("tanque");
             default:
                 System.out.println("Opcion no valida");
             }
@@ -314,15 +298,15 @@ class FabricaMadMax {
 
             switch (opcion) {
             case "1":
-                return (Arma) fabricaArma.getComponente("arpones");
+                return (Arma)fabricaArma.getComponente("arpones");
             case "2":
-                return (Arma) fabricaArma.getComponente("lanzallamas");
+                return (Arma)fabricaArma.getComponente("lanzallamas");
             case "3":
-                return (Arma) fabricaArma.getComponente("cañones");
+                return (Arma)fabricaArma.getComponente("cañones");
             case "4":
-                return (Arma) fabricaArma.getComponente("sierra");
+                return (Arma)fabricaArma.getComponente("sierra");
             case "5":
-                return (Arma) fabricaArma.getComponente("metralleta");
+                return (Arma)fabricaArma.getComponente("metralleta");
             default:
                 System.out.println("Opcion no valida");
             }
@@ -345,20 +329,31 @@ class FabricaMadMax {
             opcion = sc.nextLine();
             switch (opcion) {
             case "1":
-                // Diremos que el precio del auto ninja es de $300
-                if (dineroInicial - 300 >= 0) {
-                    // Llamamos al metodo autoPredeterminado con el parametro "ninja"
-                    auto = construirAutoPredeterminado("ninja");
-                    dineroInicial -= 300;
-                } else {
-                    System.out.println("No tienes dinero suficiente, intenta con otro auto");
+                auto = construirAutoPredeterminado("ninja");
+                if(dineroInicial - auto.getCosto() < 0){
+                    System.out.println("Dinero insuficiente");
+                    auto = null;
+                }else{
+                    dineroInicial -= auto.getCosto();
                 }
                 break;
             case "2":
-                // TODO : Agregar auto tanque al metodo AutoPredeterminado
+                auto = construirAutoPredeterminado("tanque");
+                if(dineroInicial - auto.getCosto() < 0){
+                    System.out.println("Dinero insuficiente");
+                    auto = null;
+                }else{
+                    dineroInicial -= auto.getCosto();
+                }
                 break;
             case "3":
-                // TODO : agregar auto balanceado al metodo AutoPredeterminado
+                auto = construirAutoPredeterminado("balanceado");
+                if(dineroInicial - auto.getCosto() < 0){
+                    System.out.println("Dinero insuficiente");
+                    auto = null;
+                }else{
+                    dineroInicial -= auto.getCosto();
+                }
                 break;
             case "4":
                 auto = construirAutoPersonalizado(sc, dineroInicial);
