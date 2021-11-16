@@ -1,21 +1,26 @@
-
+/**
+ * Clase que representa a LlantaOruga como un componente de carro y un tipo de llanta
+ */
 public class LlantaOruga extends ComponenteCarro implements Llanta{
 
     String tipo = " ";
 
     public LlantaOruga(){
-        // Aqui guardamos los atributos de ataque, defensa, velocidad y costo de la llanta
+        //Los atributos de ataque, defensa, velocidad y costo de la llanta
         super(70, 90, 36, 100);
     }
 
-    /**
-     * Indicamos el tipo de llanta que es para despues poder imprimirlo
-     */
+ /**
+ * Metodo que crea una llanta del tipo oruga de tanque
+ */
     @Override
     public void crearLlanta(){
         tipo = "Llanta oruga de tanque";
     }
-
+    
+/**
+ * Metodo que da el tipo de llanta
+ */
     @Override
     public void getTipo(){
         System.out.println(tipo);
