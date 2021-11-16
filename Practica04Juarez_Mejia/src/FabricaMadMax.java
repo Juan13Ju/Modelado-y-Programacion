@@ -26,13 +26,46 @@ class FabricaMadMax {
 
         switch (tipoAuto) {
         case "ninja":
-            llantas = (Llanta) fabricaLlantas.getComponente("deportivo");
+            llantas = (Llanta) fabricaLlantas.getComponente("deportiva");
             motor = (Motor) fabricaMotor.getComponente("deportivo");
             carroceria = (Carroceria) fabricaCarroceria.getComponente("deportiva");
             blindaje = (Blindaje) fabricaBlindaje.getComponente("simple");
             arma = (Arma) fabricaArma.getComponente("sierra");
             break;
-            // TODO : Añadir los otros carros personalizados
+                
+        case "buzo":
+            llantas = (Llanta) fabricaLlantas.getComponente("todoterreno");
+            motor = (Motor) fabricaMotor.getComponente("turbo");
+            carroceria = (Carroceria) fabricaCarroceria.getComponente("camion");
+            blindaje = (Blindaje) fabricaBlindaje.getComponente("tanque");
+            arma = (Arma) fabricaArma.getComponente("arpones");
+            break;
+        
+        case "soldado":
+            llantas = (Llanta) fabricaLlantas.getComponente("oruga");
+            motor = (Motor) fabricaMotor.getComponente("diesel");
+            carroceria = (Carroceria) fabricaCarroceria.getComponente("camion");
+            blindaje = (Blindaje) fabricaBlindaje.getComponente("tanque");
+            arma = (Arma) fabricaArma.getComponente("metralleta");
+            break;
+                
+        case "corredor":
+            llantas = (Llanta) fabricaLlantas.getComponente("deportiva");
+            motor = (Motor) fabricaMotor.getComponente("deportivo");
+            carroceria = (Carroceria) fabricaCarroceria.getComponente("deportiva");
+            blindaje = (Blindaje) fabricaBlindaje.getComponente("simple");
+            arma = (Arma) fabricaArma.getComponente("lanzallamas");
+            break;
+                
+        case "pirata":
+            llantas = (Llanta) fabricaLlantas.getComponente("simple");
+            motor = (Motor) fabricaMotor.getComponente("diesel");
+            carroceria = (Carroceria) fabricaCarroceria.getComponente("casual");
+            blindaje = (Blindaje) fabricaBlindaje.getComponente("reforzado");
+            arma = (Arma) fabricaArma.getComponente("canones");
+            break;
+
+            
         default:
             System.out.println("Auto no valido");
         }
