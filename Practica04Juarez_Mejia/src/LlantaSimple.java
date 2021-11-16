@@ -6,7 +6,7 @@ public class LlantaSimple extends ComponenteCarro implements Llanta{
     String tipo = " ";
 
     public LlantaSimple(){
-        // Los atributos de ataque, defensa, velocidad y costo de la llanta
+        // Los atributos de ataque, defensa, velocidad y costo de la llantaSimple
         super(20, 20, 50, 30);
     }
     
