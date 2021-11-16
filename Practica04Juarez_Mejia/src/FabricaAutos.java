@@ -1,3 +1,6 @@
+/**
+ * Clase que nos permite crear objetos de tipo Auto dependiendo del tipo de auto que se desee
+ */
 public class FabricaAutos{
 
     public static AbstractFactory getFactory(String opcion){
