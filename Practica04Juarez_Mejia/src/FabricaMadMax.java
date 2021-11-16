@@ -32,6 +32,7 @@ class FabricaMadMax {
             blindaje = (Blindaje) fabricaBlindaje.getComponente("simple");
             arma = (Arma) fabricaArma.getComponente("sierra");
             break;
+            // TODO : Añadir los otros carros personalizados
         default:
             System.out.println("Auto no valido");
         }
@@ -76,7 +77,6 @@ class FabricaMadMax {
             opcion = sc.nextLine();
             switch (opcion) {
             case "1":
-                llantas = construirLlanta(sc);
                 // Esto es para que si el usuario ya habia seleccionado un componente del mismo
                 // tipo antes
                 // el costo del componente se "devuelva" y despues se resta el costo del
@@ -84,47 +84,54 @@ class FabricaMadMax {
                 if (llantas != null) {
                     costoActual -= ((ComponenteCarro) llantas).getCosto();
                 }
+                llantas = construirLlanta(sc);
                 llantas.crearLlanta();
+                costoActual += ((ComponenteCarro)llantas).getCosto();
                 break;
             case "2":
-                motor = construirMotor(sc);
                 if (motor != null) {
                     costoActual -= ((ComponenteCarro) motor).getCosto();
                 }
+                motor = construirMotor(sc);
                 motor.crearMotor();
+                costoActual += ((ComponenteCarro)motor).getCosto();
                 break;
             case "3":
-                carroceria = construirCarroceria(sc);
                 if (carroceria != null) {
                     costoActual -= ((ComponenteCarro) carroceria).getCosto();
                 }
+                carroceria = construirCarroceria(sc);
                 carroceria.crearCarroceria();
+                costoActual += ((ComponenteCarro)carroceria).getCosto();
                 break;
             case "4":
-                blindaje = construirBlindaje(sc);
                 if (blindaje != null) {
                     costoActual -= ((ComponenteCarro) blindaje).getCosto();
                 }
+                blindaje = construirBlindaje(sc);
                 blindaje.crearBlindaje();
+                costoActual += ((ComponenteCarro)blindaje).getCosto();
                 break;
             case "5":
-                arma = construirArma(sc);
                 if (arma != null) {
                     costoActual -= ((ComponenteCarro) arma).getCosto();
                 }
+                arma = construirArma(sc);
                 arma.crearArma();
+                costoActual += ((ComponenteCarro)arma).getCosto();
                 break;
             case "6":
                 if (llantas != null && motor != null && carroceria != null && blindaje != null && arma != null) {
-                    if (dineroInicial - costoActual > 0) {
+                    if (dineroInicial - costoActual < 0) {
                         System.out.println("Dinero no suficiento para el carro deseado, intente despues");
                     } else {
                         System.out.println("Carro creado exitosamente!");
                         auto = new AutoMadMax(llantas, motor, carroceria, blindaje, arma);
                     }
-                    finished = true;
                 }
-                break;
+                System.out.println("Saliendo del menu de auto personalizado, auto no terminado...");
+                finished = true;
+                return null;
             case "7":
                 llantas = null;
                 motor = null;
@@ -202,6 +209,7 @@ class FabricaMadMax {
 
     /**
      * Metodo que le permite al usuario elegir una carroceria personalizada
+     * 
      * @param sc Scanner para tomar el input del usuario
      * @return El objeto carroceria elegido por el usuario
      */
@@ -228,27 +236,28 @@ class FabricaMadMax {
 
     /**
      * Metodo que le permite al usuario elegir un blindaje personalizado
+     * 
      * @param sc Scanner para tomar el input del usuario
      * @return El objeto blindaje elegido por el usuario
      */
-    public static Blindaje construirBlindaje(Scanner sc){
+    public static Blindaje construirBlindaje(Scanner sc) {
 
         String opcion;
 
-        while(true){
+        while (true) {
 
             System.out.println("Elige el blindaje que desees: ");
             System.out.println("1- Simple \n2- Reforzado \n3- Tanque");
             opcion = sc.nextLine();
 
-            switch(opcion){
-                case "1":
-                return (Blindaje)fabricaBlindaje.getComponente("simple");
-                case "2":
-                return (Blindaje)fabricaBlindaje.getComponente("reforzado");
-                case "3":
-                return (Blindaje)fabricaBlindaje.getComponente("tanque");
-                default:
+            switch (opcion) {
+            case "1":
+                return (Blindaje) fabricaBlindaje.getComponente("simple");
+            case "2":
+                return (Blindaje) fabricaBlindaje.getComponente("reforzado");
+            case "3":
+                return (Blindaje) fabricaBlindaje.getComponente("tanque");
+            default:
                 System.out.println("Opcion no valida");
             }
         }
@@ -256,31 +265,32 @@ class FabricaMadMax {
 
     /**
      * Metodo que le permite al usuario elegir un arma personalizada
+     * 
      * @param sc Scanner para tomar el input del usuario
      * @return El objeto arma elegido por el usuario
      */
-    public static Arma construirArma(Scanner sc){
-        
+    public static Arma construirArma(Scanner sc) {
+
         String opcion;
 
-        while(true){
+        while (true) {
 
             System.out.println("Elige el arma que desees: ");
             System.out.println("1- Arpones \n2- Lanzallamas \n3- Cañones \n4- Sierra \n5- Metralleta");
             opcion = sc.nextLine();
 
-            switch(opcion){
-                case "1":
-                return (Arma)fabricaArma.getComponente("arpones");
-                case "2":
-                return (Arma)fabricaArma.getComponente("lanzallamas");
-                case "3":
-                return (Arma)fabricaArma.getComponente("cañones");
-                case "4":
-                return (Arma)fabricaArma.getComponente("sierra");
-                case "5":
-                return (Arma)fabricaArma.getComponente("metralleta");
-                default:
+            switch (opcion) {
+            case "1":
+                return (Arma) fabricaArma.getComponente("arpones");
+            case "2":
+                return (Arma) fabricaArma.getComponente("lanzallamas");
+            case "3":
+                return (Arma) fabricaArma.getComponente("cañones");
+            case "4":
+                return (Arma) fabricaArma.getComponente("sierra");
+            case "5":
+                return (Arma) fabricaArma.getComponente("metralleta");
+            default:
                 System.out.println("Opcion no valida");
             }
         }
@@ -304,6 +314,7 @@ class FabricaMadMax {
             case "1":
                 // Diremos que el precio del auto ninja es de $300
                 if (dineroInicial - 300 >= 0) {
+                    // Llamamos al metodo autoPredeterminado con el parametro "ninja"
                     auto = construirAutoPredeterminado("ninja");
                     dineroInicial -= 300;
                 } else {
@@ -318,6 +329,9 @@ class FabricaMadMax {
                 break;
             case "4":
                 auto = construirAutoPersonalizado(sc, dineroInicial);
+                if(auto != null){
+                    dineroInicial -= auto.getCosto();
+                }
                 break;
             case "5":
                 System.out.println("Vuelva pronto!");
@@ -330,6 +344,7 @@ class FabricaMadMax {
                 System.out.println("Imprimiendo la informacion de tu auto");
                 auto.muestraAuto();
             }
+            System.out.println("Tu dinero restante es: " + dineroInicial);
         }
         sc.close();
     }
