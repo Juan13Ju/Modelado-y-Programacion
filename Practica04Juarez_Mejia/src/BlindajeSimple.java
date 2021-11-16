@@ -6,7 +6,7 @@ public class BlindajeSimple extends ComponenteCarro implements Blindaje{
     String tipo = " ";
 
     public BlindajeSimple(){
-
+        // Los atributos ataque, defensa, velocidad y costo del blindaje simple
         super(0, 40, 20, 50);
     }
     
