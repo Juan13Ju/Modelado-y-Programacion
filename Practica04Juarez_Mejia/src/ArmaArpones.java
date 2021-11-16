@@ -6,6 +6,7 @@ public class ArmaArpones extends ComponenteCarro implements Arma{
     String tipo = " ";
 
     public ArmaArpones(){
+        // Los atributos ataque, defensa, velocidad y costo de un arpon
         super(45, 0, 20, 40);
     }
     
