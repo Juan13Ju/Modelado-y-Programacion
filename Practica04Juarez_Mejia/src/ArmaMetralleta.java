@@ -6,6 +6,7 @@ public class ArmaMetralleta extends ComponenteCarro implements Arma{
     String tipo = " ";
 
     public ArmaMetralleta(){
+        // Los atributos ataque, defensa, velocidad y costo de la metralleta
         super(100, 90, 100, 100);
     }
 
