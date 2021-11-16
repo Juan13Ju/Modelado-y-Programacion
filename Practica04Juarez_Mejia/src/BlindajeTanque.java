@@ -6,7 +6,7 @@ public class BlindajeTanque extends ComponenteCarro implements Blindaje{
     String tipo = " ";
 
     public BlindajeTanque(){
-
+        // Los atributos ataque, defensa, velocidad y costo del blindaje tanque
         super(46, 84, 14, 89);
     }
 
