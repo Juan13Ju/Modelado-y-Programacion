@@ -1,4 +1,4 @@
-class CarroceriaCamion extends ComponenteCarro implements Carroceria{
+public class CarroceriaCamion extends ComponenteCarro implements Carroceria{
 
     String tipo = " ";
 
@@ -15,7 +15,7 @@ class CarroceriaCamion extends ComponenteCarro implements Carroceria{
     }
 
     @Override
-    public void getCarroceria(){
+    public void getTipo(){
 
         System.out.println(tipo);
     }

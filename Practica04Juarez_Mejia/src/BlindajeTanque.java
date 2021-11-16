@@ -1,4 +1,4 @@
-class BlindajeTanque extends ComponenteCarro implements Blindaje{
+public class BlindajeTanque extends ComponenteCarro implements Blindaje{
 
     String tipo = " ";
 
@@ -14,7 +14,7 @@ class BlindajeTanque extends ComponenteCarro implements Blindaje{
     }
 
     @Override
-    public void getBlindaje(){
+    public void getTipo(){
 
         System.out.println(tipo);
     }

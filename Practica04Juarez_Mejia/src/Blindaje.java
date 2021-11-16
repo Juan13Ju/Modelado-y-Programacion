@@ -2,5 +2,5 @@ public interface Blindaje{
 
     public void crearBlindaje();
 
-    public void getBlindaje();
+    public void getTipo();
 }

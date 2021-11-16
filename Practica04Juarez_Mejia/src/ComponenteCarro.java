@@ -17,7 +17,7 @@ public abstract class ComponenteCarro{
         this.costo = costo;
     }
 
-    // Metodos setters
+    // Metodos getters
     public int getAtaque(){
         return this.ataque;
     }

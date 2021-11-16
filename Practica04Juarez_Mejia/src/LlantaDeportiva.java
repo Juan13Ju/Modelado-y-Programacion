@@ -1,4 +1,4 @@
-class LlantaDeportiva extends ComponenteCarro implements Llanta{
+public class LlantaDeportiva extends ComponenteCarro implements Llanta{
 
     String tipo = " ";
 

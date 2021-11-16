@@ -17,7 +17,7 @@ class FabricaArma extends AbstractFactory{
             case "lanzallamas":
             return new ArmaLanzallamas();
             case "cañones":
-            return new ArmaCañones;
+            return new ArmaCanones();
             case "sierra":
             return new ArmaSierra();
             case "metralleta":

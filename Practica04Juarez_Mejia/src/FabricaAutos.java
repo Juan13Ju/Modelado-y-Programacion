@@ -1,6 +1,6 @@
-class FabricaAutos{
+public class FabricaAutos{
 
-    public static AbstractFactory gerFactory(String opcion){
+    public static AbstractFactory getFactory(String opcion){
 
         opcion = opcion.toLowerCase();
 

@@ -1,4 +1,4 @@
-class MotorDiesel extends ComponenteCarro implements Motor{
+public class MotorDiesel extends ComponenteCarro implements Motor{
 
     String tipo = " ";
 
@@ -14,7 +14,7 @@ class MotorDiesel extends ComponenteCarro implements Motor{
     }
 
     @Override
-    public void getMotor(){
+    public void getTipo(){
 
         System.out.println(tipo);
     }

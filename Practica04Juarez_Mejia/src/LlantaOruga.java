@@ -1,5 +1,5 @@
 
-class LlantaOruga extends ComponenteCarro implements Llanta{
+public class LlantaOruga extends ComponenteCarro implements Llanta{
 
     String tipo = " ";
 

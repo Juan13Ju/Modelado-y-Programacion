@@ -1,4 +1,4 @@
-class ArmaCanones extends ComponenteCarro implements Arma{
+public class ArmaCanones extends ComponenteCarro implements Arma{
 
     String tipo = " ";
 
@@ -12,7 +12,7 @@ class ArmaCanones extends ComponenteCarro implements Arma{
     }
 
     @Override
-    public void getArma(){
+    public void getTipo(){
         System.out.println(tipo);
     }
 }
