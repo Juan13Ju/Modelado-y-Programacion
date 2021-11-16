@@ -6,7 +6,7 @@ public class LlantaDeportiva extends ComponenteCarro implements Llanta{
     String tipo = " ";
 
     public LlantaDeportiva(){
-        // Los atributos de ataque, defensa, velocidad y costo de la llanta
+        // Los atributos de ataque, defensa, velocidad y costo de la llantaDeportiva
         super(35, 15, 90, 60);
     }
 
