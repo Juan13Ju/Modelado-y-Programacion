@@ -179,7 +179,7 @@ class Main {
 
         while (true) {
             System.out.println("Selecciona el tipo de llanta que deseas:");
-            System.out.println("1- Simples \n2- Deportivas \n3- Llantas off-road \n4- Oruga de tanque");
+            System.out.println("1- Simples $30 \n2- Deportivas $60\n3- Llantas off-road $80\n4- Oruga de tanque $100");
             opcion = sc.nextLine();
             switch (opcion) {
             case "1":
@@ -209,7 +209,7 @@ class Main {
 
         while (true) {
             System.out.println("Elige un motor de la lista: ");
-            System.out.println("1- Deportivo \n2- Diesel \n3- Turbo");
+            System.out.println("1- Deportivo $60\n2- Diesel $30\n3- Turbo $45");
             opcion = sc.nextLine();
             switch (opcion) {
             case "1":
@@ -236,7 +236,7 @@ class Main {
 
         while (true) {
             System.out.println("Elige una carroceria de la lista: ");
-            System.out.println("1- Casual \n2- Camion \n3- Deportiva");
+            System.out.println("1- Casual $40\n2- Camion $80\n3- Deportiva $66");
             opcion = sc.nextLine();
             switch (opcion) {
             case "1":
@@ -264,7 +264,7 @@ class Main {
         while (true) {
 
             System.out.println("Elige el blindaje que desees: ");
-            System.out.println("1- Simple \n2- Reforzado \n3- Tanque");
+            System.out.println("1- Simple $50\n2- Reforzado $70\n3- Tanque $89");
             opcion = sc.nextLine();
 
             switch (opcion) {
@@ -293,7 +293,7 @@ class Main {
         while (true) {
 
             System.out.println("Elige el arma que desees: ");
-            System.out.println("1- Arpones \n2- Lanzallamas \n3- Cañones \n4- Sierra \n5- Metralleta");
+            System.out.println("1- Arpones $40\n2- Lanzallamas $85\n3- Cañones $59\n4- Sierra $12\n5- Metralleta $100");
             opcion = sc.nextLine();
 
             switch (opcion) {
@@ -325,7 +325,7 @@ class Main {
         while (!opcion.equals("5")) {
             auto = null;
             System.out.println(
-                    "Eliga una de las siguientes opciones: \n1- Auto ninja \n2- Auto tanque \n3- Auto balanceado \n4- Auto personalizado \n5- salir");
+                    "Eliga una de las siguientes opciones: \n1- Auto ninja $248 \n2- Auto tanque $399\n3- Auto balanceado $229\n4- Auto personalizado \n5- salir");
             opcion = sc.nextLine();
             switch (opcion) {
             case "1":
