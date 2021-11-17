@@ -1,5 +1,5 @@
 /**
- * Clase que representa a MotorDeportivo como un componente de carro y un tipo de arma
+ * Clase que representa a MotorDeportivo como un componente de carro y un tipo de motor
  */
 public class MotorDeportivo extends ComponenteCarro implements Motor{
 
