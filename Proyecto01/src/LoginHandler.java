@@ -17,10 +17,11 @@ class LoginHandler{
         // Recorremos la lista de usuarios hasta encontrar al usuario que va a hacer login
         for(Usuario user : usuarios){
             // Y regresamos si la contraseña que ingreso es igual a la contraseña guardada
-            if(user.getNombre().equals(nombreUsuario)){
+            if(user.getUsuario().equals(nombreUsuario)){
                 return user.getContrasena().equals(contrasena);
             }
         }
+
         return false;
     }
 }
