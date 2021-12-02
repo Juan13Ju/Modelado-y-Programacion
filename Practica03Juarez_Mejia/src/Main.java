@@ -134,9 +134,9 @@ class Main{
         String op = "1";
 
         while(!op.equals("0")){
-            System.out.println("Bienvenido a WaySub! ft. Pizzas de Don Cangrejo);
+            System.out.println("Bienvenido a WaySub! ft. Pizzas de Don Cangrejo");
             System.out.println("Ahora con pizzas ademas de nuestros deliciosos baguettes");
-            System.out.println("Selecciona la opcion que deseas comer hoy);
+            System.out.println("Selecciona la opcion que deseas comer hoy");
             System.out.println("\n 1- Baguette \n 2- Pizza \n 0- Salir");
             op = sc.nextLine();
             switch(op){
