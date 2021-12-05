@@ -1,7 +1,7 @@
 /**
  * Clase que representa un usuario de la tienda
  */
-class Usuario{
+class Usuario implements MyObserver{
 
     private String usuario;
     private String contrasena;
@@ -10,6 +10,7 @@ class Usuario{
     private String direccion;
     private String cuentaBancaria;
     private String pais;
+    private boolean tienePromocion;
 
     /**
      * Clase contructora de un usuario
@@ -37,8 +38,14 @@ class Usuario{
             this.direccion = direccion;
             this.cuentaBancaria = cuentaBancaria;
             this.pais = pais;
+            this.tienePromocion = false;
     }
 
+    // Si un usuario tiene la promocion, se le notifica
+    @Override
+    public void update(){
+        this.tienePromocion = true;
+    }
     
     public String getUsuario(){
         return this.usuario;
@@ -66,5 +73,9 @@ class Usuario{
 
     public String getPais(){
         return this.pais;
+    }
+
+    public boolean tienePromocion(){
+        return this.tienePromocion;
     }
 }
