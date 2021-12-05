@@ -1,12 +1,12 @@
-import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedList;
 
 /**
  * Clase que representa un catalogo de la tienda CheemsMart
  */
 public class Catalogo {
     
-    private ArrayList<Producto> catalogo = new ArrayList<Producto>();
+    private LinkedList<Producto> catalogo = new LinkedList<Producto>();
     
     
     public Catalogo(){
@@ -78,7 +78,27 @@ public class Catalogo {
  */
 public Iterator getIterador(){
     return catalogo.iterator();
-}    
+}  
+
+/**
+ * Metodo para obtener un producto del catalogo para poder agregarlo al carrito de compra
+ * @param nombre El nombre del producto
+ * @return El objeto producto si el producto se encuentra en el catalogo, null en caso contrario
+ */
+public Producto getProducto(String nombre){
+
+    for(Producto prod : catalogo){
+        if(prod.getNombre().equals(nombre)){
+            return prod;
+        }
+    }
+    return null;
+}
+
+// !Borrar este metodo
+public LinkedList<Producto> getLista(){
+    return this.catalogo;
+}
     
     
 }
