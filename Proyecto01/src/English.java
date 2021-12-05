@@ -60,6 +60,48 @@ public class English implements Lenguaje{
                 while(productos.hasNext()){
                     System.out.println(productos.next().toString());
                 }
+                    do{
+                        System.out.println("Write the barcode of the product you want or write 'cancel' if you want to cancel the purchase\n");
+                        String productwanted = in.nextLine();
+                        Producto p = catalogo.getProducto(productwanted);
+                        option = productwanted;
+                        while(true){
+                        try{
+                        System.out.println("Do u want to add: " + p.getNombre() + " to your shopping cart?\n"
+                                + "1.- Yes\n"
+                                + "2.- No\n");
+                        String want = in.nextLine();
+                        desc = Integer.parseInt(want);
+                        break;
+                        } catch (NumberFormatException ex){
+                            System.out.println("Enter a valid option\n"
+                                    + "Do u want to add: " + p.getNombre() + " to your shopping cart?\n"
+                                            + "1.- Yes\n"
+                                            + "2.- No\n");
+                        }
+                        }
+                        if (desc == 1){
+                            carrito.add(p);
+                            while(true){
+                                try{
+                                    System.out.println("Do u want to add more products to your shopping cart?\n"
+                                            + "1.- Yes\n"
+                                            + "2.- No\n");
+                                    String want = in.nextLine();
+                                    more = Integer.parseInt(want);
+                                    break;
+                                } catch (NumberFormatException ex){
+                                    System.out.println("Do u want to add more products to your shopping cart?\n"
+                                            + "1.- Yes\n"
+                                            + "2.- No\n");
+                                }
+                            }
+                            if (more == 1){
+                                option = "continue";
+                            } else System.out.println("Falta codigo aqui");//aquí va el código cuando ya quiere realizar la compra
+                            option = "cancel"; 
+                                } 
+                    } while (option == "cancel");
             case 3:
                 break;
             default:
@@ -67,7 +109,6 @@ public class English implements Lenguaje{
                 break;
                 
         }
-    } while (opcion != 3);
     }
     
 }
