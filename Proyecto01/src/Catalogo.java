@@ -1,13 +1,16 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
+/**
+ * Clase que representa un catalogo de la tienda CheemsMart
+ */
 public class Catalogo {
     
     private ArrayList<Producto> catalogo = new ArrayList<Producto>();
     
     
     public Catalogo(){
-    
+    // Los atributos o productos del area de electronica, electronidomesticos y abarrotes.
         Producto p1 = new Producto("Pantalla Smart TV 40 pulgadas Hisense","060890135673","Electronica",5990);
         Producto p2 = new Producto("Pantalla Smart TV 50 pulgadas Samsung","010203040565","Electronica",8990);
         Producto p3 = new Producto("Pantalla Smart TV 48 pulgadas TLC", "684628492741","Electronica",6750);
@@ -28,16 +31,16 @@ public class Catalogo {
         Producto p18 = new Producto("Horno Electrico Max Kalorik","247839384394","Electrodomesticos",7999);
         Producto p19 = new Producto("Ventilador de Pedestal Taurus","48349283882","Electrodomesticos",566);
         Producto p20 = new Producto("Extractor de jugos T-fal","32523423985", "Electrodomesticos",1049);
-        Producto p21 = new Producto("Pack de 12 Frijoles Bayos la costeña","5972893256","Abarrotes",381);
+        Producto p21 = new Producto("Pack de 12 Frijoles Bayos La Costeña","5972893256","Abarrotes",381);
         Producto p22 = new Producto("Huevo Blanco San Juan 30 pzas", "481928384872","Abarrotes",67);
         Producto p23 = new Producto("Galletas Principe","747238293293","Abarrotes",36);
         Producto p24 = new Producto("Cereal Kellogs FrootLoops","448595930324","Abarrotes",46);
         Producto p25 = new Producto("Mayonesa McCormick", "93856385","Abarrotes",63);
         Producto p26 = new Producto("Atun Dolores aleta amarilla 140g","983884103430","Abarrotes",19);
-        Producto p27 = new Producto("Cafe soluble nescafe 400g","43809232472","Abarrotes",156);
+        Producto p27 = new Producto("Cafe soluble Nescafe 400g","43809232472","Abarrotes",156);
         Producto p28 = new Producto("Sopa Maruchan de Camaron con Habanero", "281289343298","Abarrotes",12);
         Producto p29 = new Producto("Leche Alpura Deslactosada","5734874387","Abarrotes",22);
-        Producto p30 = new Producto("Aceite de cocica 123","48734149393","Abarrotes",29);
+        Producto p30 = new Producto("Aceite de cocina 123","48734149393","Abarrotes",29);
         catalogo.add(p1);
         catalogo.add(p2);
         catalogo.add(p3);
@@ -70,6 +73,9 @@ public class Catalogo {
         catalogo.add(p30);
     }
 
+/**
+ * Metodo que da el catalogo
+ */
 public Iterator getIterador(){
     return catalogo.iterator();
 }    
