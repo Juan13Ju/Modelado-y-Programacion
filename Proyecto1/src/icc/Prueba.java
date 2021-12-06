@@ -21,6 +21,14 @@ public static void main(final String[] args) {
     for (int i = 0; i < 11; i++) {
         System.out.println(String.format("%s salio un total de %s veces ", i + 2, simulacionDados[i]));
     }
+    
+    // Para imprirmir el histograma
+    for(int i = 0; i < 11; i++){
+        System.out.print(i + ": ");
+        for(int j = 0; j < simulacionDados[i]; j++){
+            System.out.print("*");
+        }
+    }
 }
 
     public static int amount() {
