@@ -13,26 +13,28 @@ public static void main(final String[] args) {
     try (Scanner scanner = new Scanner(System.in)) {
         entrada = scanner.nextInt();
     }
+    
     final int[] simulacionDados = new int[11];
     for (int x = 0; x < entrada; x++) {
-        simulacionDados[amount() - 2]++;
+        simulacionDados[suma() - 2]++;
     }
+    
     System.out.println(String.format("RESULTADOS DE LA SIMULACION"));
     for (int i = 0; i < 11; i++) {
         System.out.println(String.format("%s salio un total de %s veces ", i + 2, simulacionDados[i]));
     }
     
     // Para imprirmir el histograma
-    for(int i = 2; i < 11; i++){
-        System.out.print(i + ": ");
+    for(int i = 0; i < 11; i ++){
+        System.out.print(i + 2 + ": ");
         for(int j = 0; j < simulacionDados[i]; j++){
             System.out.print("*");
         }
         System.out.println();
+      }
     }
-}
 
-    public static int amount() {
+    public static int suma() {
         return random.nextInt(6) + random.nextInt(6) + 2;
 
     }
