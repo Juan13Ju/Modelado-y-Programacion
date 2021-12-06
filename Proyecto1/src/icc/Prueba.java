@@ -23,11 +23,12 @@ public static void main(final String[] args) {
     }
     
     // Para imprirmir el histograma
-    for(int i = 0; i < 11; i++){
+    for(int i = 2; i < 11; i++){
         System.out.print(i + ": ");
         for(int j = 0; j < simulacionDados[i]; j++){
             System.out.print("*");
         }
+        System.out.println();
     }
 }
 
