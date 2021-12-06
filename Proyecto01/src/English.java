@@ -1,5 +1,6 @@
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.LinkedList;
 
 
 public class English implements Lenguaje{

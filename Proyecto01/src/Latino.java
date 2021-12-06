@@ -1,5 +1,6 @@
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.LinkedList;
 
 
 public class Latino implements Lenguaje{
@@ -7,7 +8,6 @@ public class Latino implements Lenguaje{
     @Override
     public void mostrarCatalogo() {
         Scanner in = new Scanner(System.in);
-        int opcion;Scanner in = new Scanner(System.in);
         int opcion;
         int desc;
         String option;

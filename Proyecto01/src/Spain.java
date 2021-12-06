@@ -1,5 +1,6 @@
 import java.util.Iterator;
 import java.util.Scanner;
+import java.util.LinkedList;
 
 /**
  * Clase que representa un catalogo de la tienda CheemsMart en formato Español de España tio
