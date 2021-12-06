@@ -113,7 +113,7 @@ public class Spain implements Lenguaje{
             case 3:
                 break;
             default:
-                System.out.println("Por favor elige la opcion que deseas ejecutar ostias");
+                System.out.println("Joder, por favor elige la opcion que deseas ejecutar ostias");
                 break;
                 
         }
