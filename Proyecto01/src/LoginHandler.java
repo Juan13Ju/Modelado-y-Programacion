@@ -26,4 +26,36 @@ class LoginHandler{
 
         throw new WrongCredentialsException();
     }
+    
+    /**
+     * Método para recuperar la nacionalidad de un usuario dado su nombre y contraseña
+     * @param nombreUsuario
+     * @param contrasena
+     * @param usuarios
+     * @return 
+     */
+    public static String getNationality(String nombreUsuario, String contrasena, LinkedList<Usuario>usuarios){
+        for(Usuario user: usuarios){
+            if((user.getUsuario().equals(nombreUsuario)) && (user.getContrasena().equals(contrasena))){
+                return user.getPais();
+            }
+        }
+        return null;
+    }
+    
+    /**
+     * Método para recuperar el usuario dado su nombre y contraseña
+     * @param nombreUsuario
+     * @param contrasena
+     * @param usuarios
+     * @return 
+     */
+    public static Usuario getUser(String nombreUsuario, String contrasena, LinkedList<Usuario>usuarios){
+        for(Usuario user: usuarios){
+            if((user.getUsuario().equals(nombreUsuario)) && (user.getContrasena().equals(contrasena))){
+                return user;
+            }
+        }
+        return null;
+    }
 }  
