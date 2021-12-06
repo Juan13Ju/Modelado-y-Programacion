@@ -7,8 +7,12 @@ public class English implements Lenguaje{
     @Override
     
     public void mostrarCatalogo() {
-        Scanner in = new Scanner(System.in);
+       Scanner in = new Scanner(System.in);
         int opcion;
+        int desc;
+        String option;
+        int more;
+        LinkedList<Producto> carrito = new LinkedList<Producto>();
         Catalogo catalogo = new Catalogo();
         Iterator productos = catalogo.getIterador();
         System.out.println("**********WELCOME TO CHEEMSMART**********");
