@@ -42,16 +42,22 @@ class Promocion implements Subject{
      * @param productos Lista ligada con los productos que el cliente quiere comprar
      */
     public void generarTicket(LinkedList<Producto> productos, boolean isPromoAvailable){
+        double suma = 0;
+        System.out.println("-----------");
+        System.out.println("Ticket");
+        System.out.println("-----------");
         if(!isPromoAvailable){
             for(Producto prod : productos){
                 System.out.println(prod.getNombre() + " $" + prod.getPrecio());
+                suma += prod.getPrecio();
             }
+            System.out.println("TOTAL: " + suma);
             return;
         }
 
-        System.out.println("Aplicando promocion a productos de " + departamentoPromocion);
         for(Producto prod : productos){
             System.out.println(prod.getNombre() + " $" + aplicarPromocion(prod));
+            suma += getPrecioConPromo(prod);
         }
     }
 
@@ -60,15 +66,23 @@ class Promocion implements Subject{
      * @param prod El producto al que se decidira si se le aplica promocion
      * @return El precio del producto despues de la promocion. (El precio original si no hay descuentos disponibles)
      */
-    public double aplicarPromocion(Producto prod){
+    public String aplicarPromocion(Producto prod){
         if(prod.getDepartamento().equals(departamentoPromocion)){
-            return prod.getPrecio() * (1-descuento);
+            return prod.getPrecio() + " * " + (1-descuento) + " = " + (prod.getPrecio()*(1-descuento));
         }
-        return prod.getPrecio();
+        return prod.getPrecio() + "";
+    }
+
+    public double getPrecioConPromo(Producto prod){
+        return prod.getPrecio() * (1-descuento);
     }
 
     public String getDepartamento(){
         return this.departamentoPromocion;
+    }
+
+    public double getDescuento(){
+        return this.descuento * 100;
     }
 
 }

@@ -76,7 +76,7 @@ public class Catalogo {
 /**
  * Metodo que da el catalogo
  */
-public Iterator getIterador(){
+public Iterator<Producto> getIterador(){
     return catalogo.iterator();
 }  
 
@@ -85,10 +85,10 @@ public Iterator getIterador(){
  * @param nombre El nombre del producto
  * @return El objeto producto si el producto se encuentra en el catalogo, null en caso contrario
  */
-public Producto getProducto(String nombre){
+public Producto getProducto(String codigo){
 
     for(Producto prod : catalogo){
-        if(prod.getNombre().equals(nombre)){
+        if(prod.getCodigobarras().equals(codigo)){
             return prod;
         }
     }
