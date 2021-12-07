@@ -100,7 +100,7 @@ class InterfazSpain implements InterfazTienda {
         System.out.println("-----");
         System.out.println("Nuestra compra segura si que flipa, inicando");
         System.out.println("-----");
-        System.out.println("Ingresa tu cuenta bancaria registrada para terminad la compra tio: ");
+        System.out.println(user.getNombre() + ", ingresa tu cuenta bancaria registrada para terminad la compra tio: ");
         String cuenta = sc.nextLine();
         if(cuenta.equals(user.getCuentaBanco())){
             System.out.println("Transaccion a todo gas, generando ticket");

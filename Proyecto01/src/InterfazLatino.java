@@ -100,7 +100,7 @@ class InterfazLatino implements InterfazTienda {
         System.out.println("-----");
         System.out.println("Iniciando compra segura");
         System.out.println("-----");
-        System.out.println("Ingresa tu cuenta bancaria registrada para terminar la compra: ");
+        System.out.println(user.getNombre() + ", ingresa tu cuenta bancaria registrada para terminar la compra: ");
         String cuenta = sc.nextLine();
         if(cuenta.equals(user.getCuentaBanco())){
             System.out.println("Transaccion exitosa, generando ticket");

@@ -100,7 +100,7 @@ class InterfazUSA implements InterfazTienda {
         System.out.println("-----");
         System.out.println("Starting secure payment");
         System.out.println("-----");
-        System.out.println("Enter your bank account to confirm transaction: ");
+        System.out.println(user.getNombre() + ", enter your bank account to confirm transaction: ");
         String cuenta = sc.nextLine();
         if(cuenta.equals(user.getCuentaBanco())){
             System.out.println("Succesful transaction, generating ticket...");
