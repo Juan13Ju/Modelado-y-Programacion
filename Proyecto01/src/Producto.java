@@ -1,3 +1,6 @@
+/**
+ * Clase que representa un producto de la tienda
+ */
 public class Producto {
     
     /**

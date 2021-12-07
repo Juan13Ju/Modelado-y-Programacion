@@ -1,6 +1,7 @@
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Scanner;
+import java.util.Date;
 
 class InterfazSpain implements InterfazTienda {
 
@@ -96,11 +97,15 @@ class InterfazSpain implements InterfazTienda {
             System.out.println("Pero tio, no has comprado nada");
             return;
         }
+        System.out.println("-----");
+        System.out.println("Nuestra compra segura si que flipa, inicando");
+        System.out.println("-----");
         System.out.println("Ingresa tu cuenta bancaria registrada para terminad la compra tio: ");
         String cuenta = sc.nextLine();
         if(cuenta.equals(user.getCuentaBanco())){
             System.out.println("Transaccion a todo gas, generando ticket");
             promo.generarTicket(carrito, user.tienePromocion());
+            System.out.println("Fecha de entrega a todo gas a " + user.getDireccion() + ": 12/12/2022");
         }else{
             System.out.println("La transaccion flipo tio, compra no exitosa");
         }

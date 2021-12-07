@@ -96,11 +96,16 @@ class InterfazUSA implements InterfazTienda {
             System.out.println("Cart is empty");
             return;
         }
+
+        System.out.println("-----");
+        System.out.println("Starting secure payment");
+        System.out.println("-----");
         System.out.println("Enter your bank account to confirm transaction: ");
         String cuenta = sc.nextLine();
         if(cuenta.equals(user.getCuentaBanco())){
             System.out.println("Succesful transaction, generating ticket...");
             promo.generarTicket(carrito, user.tienePromocion());
+            System.out.println("Delivery date at " + user.getDireccion() + ": 12/12/2022");
         }else{
             System.out.println("Wrong bank account, rejected transaction");
         }

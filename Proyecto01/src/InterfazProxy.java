@@ -1,6 +1,8 @@
 import java.util.Scanner;
 import java.util.LinkedList;
-
+/**
+ * Clase que actua como proxy para la interfaz
+ */
 class InterfazProxy implements InterfazTienda{
 
     InterfazTienda interfaz;

@@ -96,11 +96,16 @@ class InterfazLatino implements InterfazTienda {
             System.out.println("El carrito esta vacio");
             return;
         }
+
+        System.out.println("-----");
+        System.out.println("Iniciando compra segura");
+        System.out.println("-----");
         System.out.println("Ingresa tu cuenta bancaria registrada para terminar la compra: ");
         String cuenta = sc.nextLine();
         if(cuenta.equals(user.getCuentaBanco())){
             System.out.println("Transaccion exitosa, generando ticket");
             promo.generarTicket(carrito, user.tienePromocion());
+            System.out.println("Fecha de entrega a " + user.getDireccion() + ": 12/12/2022");
         }else{
             System.out.println("Transaccion rechazada, compra no exitosa");
         }

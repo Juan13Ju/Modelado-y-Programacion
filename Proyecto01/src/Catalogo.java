@@ -8,7 +8,9 @@ public class Catalogo {
     
     private LinkedList<Producto> catalogo = new LinkedList<Producto>();
     
-    
+    /**
+     * Constructos del catalogo de la tienda, aqui podemos agregar o quitar productos
+     */
     public Catalogo(){
     // Los atributos o productos del area de electronica, electronidomesticos y abarrotes.
         Producto p1 = new Producto("Pantalla Smart TV 40 pulgadas Hisense","01","Electronica",5990);
@@ -75,6 +77,7 @@ public class Catalogo {
 
 /**
  * Metodo que da el catalogo
+ * @return Un iterador para recorrer el catalogo
  */
 public Iterator<Producto> getIterador(){
     return catalogo.iterator();
@@ -94,11 +97,5 @@ public Producto getProducto(String codigo){
     }
     return null;
 }
-
-// !Borrar este metodo
-public LinkedList<Producto> getLista(){
-    return this.catalogo;
-}
-    
-    
+        
 }

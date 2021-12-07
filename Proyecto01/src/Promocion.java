@@ -1,14 +1,14 @@
-// Clase donde se manejan las promociones al publico mexicano
+// Clase donde se manejan las promociones de acuerdo al departamento dado
 import java.util.LinkedList;
 import java.util.Random;
 
 class Promocion implements Subject{
 
-    // La lista de clientes mexicanos
+    // La lista de clientes del pais correspondiente que se crea en la clase TiendaCheems
     private LinkedList<MyObserver> observers;
     // Un string que nos permite definir para que departamento damos las promociones
     private String departamentoPromocion;
-    // Porcentaje de descuento que se va a aplicar
+    // Porcentaje de descuento que se va a aplicar, es elegido al azar
     private double descuento;
 
     public Promocion(String departamento){
@@ -40,6 +40,7 @@ class Promocion implements Subject{
     /**
      * Metodo para generar el ticket de compra aplicando el descuento a los productos correspondientes
      * @param productos Lista ligada con los productos que el cliente quiere comprar
+     * @param isPromoAvailable Un booleano que nos dice si el cliente cuenta con una promocion
      */
     public void generarTicket(LinkedList<Producto> productos, boolean isPromoAvailable){
         double suma = 0;
