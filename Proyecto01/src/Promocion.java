@@ -87,10 +87,16 @@ class Promocion implements Subject{
         return prod.getPrecio();
     }
 
+    /**
+    * Metodo que da la promocion disponible en el departamento
+    */
     public String getDepartamento(){
         return this.departamentoPromocion;
     }
 
+    /**
+    * Metodo que da el descuento de un producto
+    */
     public double getDescuento(){
         return this.descuento * 100;
     }
