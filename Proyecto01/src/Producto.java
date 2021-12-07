@@ -14,27 +14,39 @@ public class Producto {
     private String codigobarras;
     
     /**
-     * Departamento
+     * Departamento al que pertenece el producto
      */
     private String departamento;
     
    /**
-    * Precio
+    * Precio del producto
     */
     private double precio;
 
+    /**
+    * Metodo que da el nombre del producto
+    */
     public String getNombre() {
         return nombre;
     }
 
+    /**
+    * Metodo que da el codigo de barras del producto
+    */
     public String getCodigobarras() {
         return codigobarras;
     }
 
+    /**
+    * Metodo que da el departamento al que pertenece el producto
+    */
     public String getDepartamento() {
         return departamento;
     }
 
+    /**
+    * Metodo que da el precio del producto
+    */
     public double getPrecio() {
         return precio;
     }
