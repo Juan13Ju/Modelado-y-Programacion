@@ -8,7 +8,6 @@ class LoginHandler{
      * @param contrasena La contraseña ingresada por el usuario
      * @param usuarios Una lista ligada que contiene a los usaurios de la aplicacion
      * @return El usuario logeado
-     * @throws WrongCredentialsException si no encontro al usuario o la contraseña es incorrecta
      */
     public static Usuario login(String nombreUsuario, String contrasena, LinkedList<Usuario>usuarios){
 
