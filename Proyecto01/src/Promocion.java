@@ -74,8 +74,17 @@ class Promocion implements Subject{
         return prod.getPrecio() + "";
     }
 
+    /**
+     * Metodo para obtener el precio como un double despues de aplicar la promocion
+     * @param prod El producto a obtener el precio
+     * @return Un double con el precio del producto despues de aplicar la promocion
+     */
     public double getPrecioConPromo(Producto prod){
-        return prod.getPrecio() * (1-descuento);
+        if(prod.getDepartamento().equals(departamentoPromocion)){
+            return prod.getPrecio() * (1-descuento);
+        }
+
+        return prod.getPrecio();
     }
 
     public String getDepartamento(){
