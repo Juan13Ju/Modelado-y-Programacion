@@ -47,34 +47,58 @@ class Usuario implements MyObserver{
         this.tienePromocion = true;
     }
     
+    /**
+    * Metodo que da el usuario del cliente
+    */
     public String getUsuario(){
         return this.usuario;
     }
 
+    /**
+    * Metodo que da la contraseña del usuario
+    */
     public String getContrasena(){
         return this.contrasena;
     }
 
+    /**
+    * Metodo que da el nombre del usuario
+    */
     public String getNombre(){
         return this.nombre;
     }
 
+    /**
+    * Metodo que da el telefono del usuario
+    */
     public String getTelefono(){
         return this.telefono;
     }
 
+    /**
+    * Metodo que da la direccion del usuario
+    */
     public String getDireccion(){
         return this.direccion;
     }
 
+    /**
+    * Metodo que da el numero de cuenta bancaria del usuario
+    */
     public String getCuentaBanco(){
         return this.cuentaBancaria;
     }
 
+    /**
+    * Metodo que da el pais de origen del usuario
+    */ 
     public String getPais(){
         return this.pais;
     }
 
+    /**
+    * Metodo que da la promocion disponible para el usuario
+    */
     public boolean tienePromocion(){
         return this.tienePromocion;
     }
